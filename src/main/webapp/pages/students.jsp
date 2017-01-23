@@ -26,7 +26,7 @@
         <tbody>
         <c:forEach items="${students}" var="stud" >
             <c:if test='${!stud.name.equals("asd")}'>
-                <tr ><th id="row2" height="100px"><input type="checkbox" name="id" id="studid" value="${stud.id}"></th>
+                <tr ><th id="row2" height="100px"><input type="checkbox" name="id" id="stud" value="${stud.id}"></th>
                     <td>${stud.name}</td>
                     <td>${stud.surname}</td>
                     <td>${stud.group}</td>
