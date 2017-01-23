@@ -16,6 +16,7 @@ tr {
     background:grey;
 
 }
+
 .button{
 
     background-color:#0000;
@@ -23,19 +24,17 @@ tr {
 .login_form_container table#login_table {
     width: 100%;
 
-    line-height: 30px;
+    line-height: 40px;
     background-color:#f0f0f0;
 }
-form {
-    display: block;
-    margin-top: 0em;
-}
+
 .login_form_container {
     margin: 100px auto;
     width: 330px;
 
 
 }
+
 .login_form_container select{
     font: 13px Comic Sans MS;
 
@@ -48,57 +47,114 @@ form {
     border-bottom: 4px groove #f0f0ff;
 
 }
+.columStud {
 
-table {
-    border-radius:10px 10px;
-    margin: 0 auto;
+    background: #C4C4C4;
+    padding: 0px;
+    border-spacing: 0px;
+}
+.textStud {
+    font: 20px Comic Sans MS;
+    margin-bottom: 30px;
+    color: darkgray;
+}
+#row1 {
+    color: black;
+    background: #C4C4C4;
+    padding: 0px;
+    border-spacing: 0px;
+}
+table{
+    margin: -50px auto;
     min-width: 350px;
     max-width: 1920px;
     text-align: center;
-    width: 100%;
+    width: 80%;
     font: 15px Comic Sans MS;
-    background-color:gray;
+    background: #f0f0ff;
     color: black;
-    border-spacing: 10px;
+    border-spacing: 0px;
     position: relative;
     box-shadow: #d1eeff;
-    border: 4px groove #f0f0ff;
-
+    border: 4px groove grey;
+    border-radius:10px 10px;
 
 }
 
-
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-}
 
 
 #header {
     background-color:#f0f0f0;
     text-align: center;
     width: 65%;
-    border: 4px groove #f0f0ff;
+    border: 4px groove grey;
     border-radius:10px 10px;
     font: 18pt Comic Sans MS;
 
     top: 0%;
     left: 18%;
-    margin: 20px auto;
+    margin:  auto;
     overflow:auto;
 
 }
-li {
-    list-style-type: none;
-    display: list-item;
-    text-align: -webkit-match-parent;
+form {
+    display:block;
+    margin-top: 0em;
+
 }
 
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    list-style-type: none;
+}
+#but1 {
+    background: #f0f0f0 ;
+    width: 300px;
+    height: 30px;
+    font: 12px Arial;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    border: 4px groove grey;
+    border-radius:10px 10px;
+}
+#but2 {
+    background: #f0f0f0 ;
+    width: 230px;
+    height: 30px;
+    font: 12px Arial;
+    margin-bottom: 10px;
+    border: 4px groove grey;
+    border-radius:10px 10px;
+
+}
+#but3 {
+    background: #f0f0f0 ;
+    width: 300px;
+    height: 30px;
+    font: 12px Arial;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    border: 4px groove grey;
+    border-radius:10px 10px;
+}
+#but4 {
+    background: #f0f0f0 ;
+    width: 230px;
+    height: 30px;
+    font: 12px Arial;
+    margin-bottom: 10px;
+    border: 4px groove grey;
+    border-radius:10px 10px;
+}
+.buttonstud {
+    border: 1.5px solid #333;
+    background: #C4C4C4;
+}
+#tableStud {
+    width: 90%;
+    margin: 0 auto;
+}
 .support {
     display: inline-block;
     position: relative; /*обязательное параметр*/
