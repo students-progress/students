@@ -1,0 +1,116 @@
+body{
+    background: url("../image/aaaa.jpg");
+
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+
+}
+.button{
+
+    background-color:#0000;
+}
+.login_form_container table#login_table {
+    width: 100%;
+
+    line-height: 30px;
+    background-color:#f0f0f0;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+.login_form_container {
+    margin: 100px auto;
+    width: 330px;
+
+
+}
+.login_form_container select{
+    font: 13px Comic Sans MS;
+
+}
+
+.login_form_container table .caption {
+    text-align: center;
+    font-size: 20px;
+
+    border-bottom: 4px groove #f0f0ff;
+
+}
+
+table {
+    border-radius:10px 10px;
+    margin: 0 auto;
+    min-width: 350px;
+    max-width: 1920px;
+    text-align: center;
+    width: 100%;
+    font: 15px Comic Sans MS;
+    background-color:gray;
+    color: black;
+    border-spacing: 10px;
+    position: relative;
+    box-shadow: #d1eeff;
+    border: 4px groove #f0f0ff;
+
+
+}
+
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+
+#header {
+    background-color:#f0f0f0;
+    text-align: center;
+    width: 65%;
+    border: 4px groove #f0f0ff;
+    border-radius:10px 10px;
+    font: 18pt Comic Sans MS;
+    position: absolute;
+    top: 0%;
+    left: 18%;
+    margin-top: 20px;
+    overflow:auto;
+
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.support {
+    display: inline-block;
+    position: relative; /*обязательное параметр*/
+    text-decoration: none;
+    cursor: pointer;
+}.support em {
+     background: #FF6600;
+     border-radius: 20px;
+     border: 1px solid #999;
+     text-align: center;
+     color: #FFF;
+     font: normal bold 16px Arial;
+     padding: 0 4px;
+ }acronym{
+      background: #FF6600;
+      border-radius: 20px;
+      border: 1px solid #999;
+      text-align: center;
+      color: #FFF;
+      font: normal bold 16px Arial;
+      padding: 0 4px;
+      cursor:help;
+  }
+
