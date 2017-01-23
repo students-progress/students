@@ -45,10 +45,10 @@ public class DBConnection {
         try {
 
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/students?user=root&password=root&characterEncoding=UTF-8");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
             allstudents = con.prepareStatement("SELECT * FROM `students`");
-            allLogins = con.prepareStatement("SELECT * FROM students.accounts");
+            allLogins = con.prepareStatement("SELECT * FROM `user`");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
