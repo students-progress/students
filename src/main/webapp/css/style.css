@@ -1,5 +1,6 @@
 body{
-    background: url("../image/aaaa.jpg");
+    background: url("../image/bbb.jpg");
+    background-size: 100%;
 
 }
 tr {
