@@ -56,11 +56,14 @@ tr {
 .textStud {
     font: 20px Comic Sans MS;
     margin-bottom: 30px;
-    color: darkgray;
+    color: black;
     width: 80%;
     display: block;
     text-align: center;
     margin-top: 30px;
+    border: 4px groove grey;
+    border-radius:10px 10px;
+    background-color:#f0f0f0;
 }
 #row1 {
     color: black;
