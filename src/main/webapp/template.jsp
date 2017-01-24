@@ -9,11 +9,8 @@
 
 <body>
 
-<ul>
-    <div id="header">
-        Система управления студентами и их успеваемостью
-    </div>
-</ul>
+<div id="header">Система управления студентами и их успеваемостью</div>
+
 <jsp:include page="${currentPage}" flush="true"/>
 </body>
 </html>

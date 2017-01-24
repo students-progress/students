@@ -89,6 +89,7 @@ public class DBConnection {
             rs=allstudents.executeQuery();
             while (rs.next()){
                 Student st1=new Student();
+                st1.setId(rs.getInt("id"));
                 st1.setName(rs.getString("name"));
                 st1.setSurname(rs.getString("surname"));
                 st1.setGroup(rs.getString("group"));

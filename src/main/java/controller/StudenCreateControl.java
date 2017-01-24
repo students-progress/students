@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by Asus on 23.01.2017.
  */
-@WebServlet ("/student/studentCreate")
+@WebServlet ("/student-create")
 public class StudenCreateControl extends HttpServlet {
 
     @Override

@@ -57,6 +57,10 @@ tr {
     font: 20px Comic Sans MS;
     margin-bottom: 30px;
     color: darkgray;
+    width: 80%;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
 }
 #row1 {
     color: black;
@@ -65,7 +69,6 @@ tr {
     border-spacing: 0px;
 }
 table{
-    margin: -50px auto;
     min-width: 350px;
     max-width: 1920px;
     text-align: center;
@@ -86,16 +89,15 @@ table{
 #header {
     background-color:#f0f0f0;
     text-align: center;
-    width: 65%;
+    width: 80%;
     border: 4px groove grey;
     border-radius:10px 10px;
     font: 18pt Comic Sans MS;
-
     top: 0%;
     left: 18%;
     margin:  auto;
     overflow:auto;
-
+    margin-bottom: 30px;
 }
 form {
     display:block;
@@ -120,7 +122,7 @@ li {
 }
 #but2 {
     background: #f0f0f0 ;
-    width: 230px;
+    width: 300px;
     height: 30px;
     font: 12px Arial;
     margin-bottom: 10px;
@@ -140,7 +142,7 @@ li {
 }
 #but4 {
     background: #f0f0f0 ;
-    width: 230px;
+    width: 300px;
     height: 30px;
     font: 12px Arial;
     margin-bottom: 10px;
@@ -152,7 +154,7 @@ li {
     background: #C4C4C4;
 }
 #tableStud {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 .support {
