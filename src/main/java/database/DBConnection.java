@@ -14,6 +14,7 @@ public class DBConnection {
     private PreparedStatement statement;
     private Connection con = null;
     private ResultSet rs = null;
+    private PreparedStatement getStudentById;
     private PreparedStatement allstudents;
     private PreparedStatement allLogins;
 
@@ -47,7 +48,9 @@ public class DBConnection {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
+            statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
             allstudents = con.prepareStatement("SELECT * FROM `students`");
+            getStudentById = con.prepareStatement("SELECT * FROM `students` WHERE `id`=?");
             allLogins = con.prepareStatement("SELECT * FROM `user`");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -57,6 +60,23 @@ public class DBConnection {
 
 
     }
+public Student getStudentById(int id){
+    Student student=new Student();
+        try {
+        getStudentById.setString(1, String.valueOf(id));
+        rs=getStudentById.executeQuery();
+
+        if (rs.next()) {
+            student.setSurname(rs.getString("surname"));
+            student.setName(rs.getString("name"));
+            student.setGroup(rs.getString("group"));
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+return student;
+
+}
 
     public List<User> getAllAcounts(){
         List<User> users=new ArrayList<User>();
@@ -82,6 +102,9 @@ public class DBConnection {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public void deleteStudent(int id){
+
     }
     public List<Student> getAllStudents(){
         List<Student> students=new ArrayList<Student>();
