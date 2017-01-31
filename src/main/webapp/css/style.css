@@ -1,12 +1,13 @@
 body{
-    background: url("../image/oo.jpg");
+    background:url("../image/ol.jpg");
     background-size: 100%;
 
 }
-tr {
+tr #login_table{
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
+
 
 }
 .buttonstud{
@@ -22,10 +23,22 @@ tr {
     background-color:#0000;
 }
 .login_form_container table#login_table {
-    width: 100%;
+
 
     line-height: 40px;
-    background-color:#f0f0f0;
+
+    min-width: 350px;
+    max-width: 1920px;
+    text-align: center;
+    width: 80%;
+    font: 15px Comic Sans MS;
+    background: #f0f0ff;
+    color: black;
+    border-spacing: 10px;
+    position: relative;
+    box-shadow: black;
+    border: 5px groove grey;
+
 }
 
 .login_form_container {
@@ -34,7 +47,24 @@ tr {
 
 
 }
+.table1{
 
+
+    line-height: 40px;
+
+    min-width: 350px;
+    max-width: 1920px;
+    text-align: center;
+    width: 100%;
+    font: 15px Comic Sans MS;
+    background: #f0f0ff;
+    color: black;
+    border-spacing: 0px;
+    position: relative;
+    box-shadow: #f0f0ff;;
+    border: 5px groove grey;
+
+}
 .login_form_container select{
     font: 13px Comic Sans MS;
 
@@ -48,53 +78,69 @@ tr {
 
 }
 .columStud {
-
+    font: 18px Comic Sans MS;
     background: #C4C4C4;
     padding: 0px;
     border-spacing: 0px;
 }
 .textStud {
-    width: 79%;
+    margin-left: 31%;
+    background: #f0f0ff;
+    width: 35%;
     font: 20px Comic Sans MS;
-    margin-bottom: 30px;
     color: black;
     display: block;
     text-align: center;
     margin-top: 30px;
-    border: 4px groove grey;
-    border-radius:10px 10px;
-    background-color:#f0f0f0;
+    border: 5px groove grey;
+
 }
+#panel {
+    margin-top: 50px;
+    width: 70%;
+    top: 220px;
+    height: 10px;
+}
+
 #row1 {
     color: black;
     background: #C4C4C4;
     padding: 0px;
     border-spacing: 0px;
 }
-table{
-    min-width: 350px;
-    max-width: 1920px;
-    text-align: center;
-    width: 80%;
-    font: 15px Comic Sans MS;
-    background: #f0f0ff;
-    color: black;
-    border-spacing: 0px;
-    position: relative;
-    box-shadow: #d1eeff;
-    border: 4px groove grey;
-    border-radius:10px 10px;
+a:hover{
+    color: white;
+    background: 	#696969;
+    font: 16px Comic Sans MS;
+}
 
+a{
+
+    cursor: pointer;
+
+    color: black; /* Цвет текста */
+    text-decoration: none;
+    /* Поля вокруг текста */
+    display:block;
+
+
+
+
+
+    -moz-transition:background .2s ease-in-out;
+    -webkit-transition:background .2s ease-in-out;
+    -o-transition:background .2s ease-in-out;
+    transition:background .2s ease-in-out;
 }
 
 
-
 #header {
+
     background-color:#f0f0f0;
     text-align: center;
-    width: 80%;
-    border: 4px groove grey;
-    border-radius:10px 10px;
+    width: 70%;
+    border: 5px groove grey;
+
     font: 18pt Comic Sans MS;
     top: 0%;
     left: 18%;
@@ -114,50 +160,119 @@ li {
     list-style-type: none;
 }
 #but1 {
+
     background: #f0f0f0 ;
     width: 300px;
-    height: 30px;
-    font: 12px Arial;
+    height: 40px;
+    font: 14px Comic Sans MS;
     margin-right: 40px;
     margin-bottom: 10px;
-    border: 4px groove grey;
-    border-radius:10px 10px;
+    border: 5px groove grey;
+
 }
 #but2 {
     background: #f0f0f0 ;
     width: 300px;
-    height: 30px;
-    font: 12px Arial;
+    height: 40px;
+    font: 14px Comic Sans MS;
     margin-bottom: 10px;
-    border: 4px groove grey;
-    border-radius:10px 10px;
+    border: 5px groove grey;
 
+
+}
+#maxw {
+    margin: 0 auto;
+    min-width: 280px;
+    max-width: 1920px;
+    text-align: center;
 }
 #but3 {
     background: #f0f0f0 ;
     width: 300px;
-    height: 30px;
-    font: 12px Arial;
+    height: 40px;
+    font: 14px Comic Sans MS;
     margin-right: 40px;
     margin-bottom: 10px;
-    border: 4px groove grey;
-    border-radius:10px 10px;
+    border: 5px groove grey;
+
 }
 #but4 {
     background: #f0f0f0 ;
     width: 300px;
-    height: 30px;
-    font: 12px Arial;
+    height: 40px;
+    font: 14px Comic Sans MS;
     margin-bottom: 10px;
-    border: 4px groove grey;
-    border-radius:10px 10px;
+    border: 5px groove grey;
+
 }
+#but1:hover{
+    cursor: pointer;
+    color: white;
+    background: 	#696969;
+    }
+#but2:hover{
+    cursor: pointer;
+    color: white;
+    background: 	#696969;
+}
+#but3:hover{
+    cursor: pointer;
+    color: white;
+    background: 	#696969;
+}
+#but4:hover{
+    cursor: pointer;
+    color: white;
+    background: 	#696969;
+}
+#col1{
+    text-align:  center;
+    background: #f0f0f0 ;
+    width: 150px;
+    height: 30px;
+    font: 16px Comic Sans MS;
+    margin-bottom: 10px;
+    border: 5px groove grey;
+
+
+}
+#col2{
+    text-align:  center;
+    background: #f0f0f0 ;
+    width: 150px;
+    height: 30px;
+    font: 16px Comic Sans MS;
+    margin-bottom: 10px;
+    border: 5px groove grey;
+
+
+}
+#col3{
+    text-align:  center;
+    background: #f0f0f0 ;
+    width: 150px;
+    height: 30px;
+    font: 16px Comic Sans MS;
+    margin-bottom: 10px;
+    border: 5px groove grey;
+}
+#col4{
+    text-align:  center;
+    background: #f0f0f0 ;
+    width: 150px;
+    height: 30px;
+    font: 16px Comic Sans MS;
+    margin-bottom: 10px;
+    border: 5px groove grey;
+}
+
+
 .buttonstud {
     border: 1.5px solid #333;
     background: #C4C4C4;
 }
 #tableStud {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 .support {

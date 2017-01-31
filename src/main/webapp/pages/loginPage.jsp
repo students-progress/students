@@ -29,7 +29,7 @@
 <div style="padding: 15px;" class="login_form_container">
     <form id="form">
 
-        <table id="login_table">
+        <table id="login_table" class="log">
             <tbody><tr>
                 <td colspan="2" class="caption">Вход <acronym title="Тестовые аккаунты:  admin / password , student / password ">!</acronym></td>
             </tr>

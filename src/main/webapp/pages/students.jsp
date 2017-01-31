@@ -6,19 +6,19 @@
         <div style="width: 320px; display: inline-block">
             <%--<input type="hidden" name="sel" value="1">--%>
             <button id="but1" type="submit" name="butMark" value="2">
-                Просмотреть успеваемость выбраного студента
+                Просмотреть успеваемость студента
             </button>
             <button id="but2" type="submit" method="post" onclick="createStudent()">Создать студента</button>
 
         </div>
         <div style="width: 320px; display: inline-block">
             <button id="but3" type="submit" name="butMark" onclick="modifyStudent()">
-                Модифицировать выбранного студента
+                Модифицировать студента
             </button>
             <button id="but4" type="submit" onclick="deleteStudent()">Удалить выбранных студентов</button>
         </div>
-        <a class="textStud"> Список студентов</a>
-        <table id="my" border="1" bordercolor="#f0f0f0">
+        <div class="textStud"> Список студентов</div>
+        <table id="my" class="table1" border="1" bordercolor="#f0f0f0">
             <tbody>
             <tr>
                 <th id="row1" height="100px"></th>
