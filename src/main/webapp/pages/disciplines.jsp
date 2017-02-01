@@ -27,7 +27,7 @@
             </tbody>
             <tbody>
 
-            <c:forEach items="${disciplin1}" var="disc">
+            <c:forEach items="${discipline}" var="disc">
              <tr> <td id="row2" height="100px"><input type="checkbox" name="idStudent"
                                                     value="${disc.id}"/></td>
                     <td>${disc.name}</td>

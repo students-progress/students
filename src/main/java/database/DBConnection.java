@@ -12,6 +12,7 @@ import java.util.List;
  * Created by Asus on 30.12.2016.
  */
 public class DBConnection {
+    private PreparedStatement delete;
     private PreparedStatement statement;
     private PreparedStatement statement1;
     private PreparedStatement statement2;
@@ -21,6 +22,14 @@ public class DBConnection {
     private PreparedStatement allstudents;
     private PreparedStatement allLogins;
     private PreparedStatement alldisciplines;
+
+    public PreparedStatement getDelete() {
+        return delete;
+    }
+
+    public void setDelete(PreparedStatement delete) {
+        this.delete = delete;
+    }
 
     public Connection getCon() {
         return con;
@@ -68,7 +77,9 @@ public class DBConnection {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
-        statement1 = con.prepareStatement("INSERT INTO `disciplines` (`disciplineName`) VALUES (?)");
+
+
+            statement1 = con.prepareStatement("INSERT INTO `disciplines` (`disciplineName`) VALUES (?)");
          alldisciplines = con.prepareStatement("SELECT * FROM `disciplines`");
           statement2 = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
             allstudents = con.prepareStatement("SELECT * FROM `students`");
@@ -126,9 +137,7 @@ return student;
             e.printStackTrace();
         }
     }
-    public void deleteStudent(int id){
 
-    }
 
     public List<Discipline> getDisciplines() {
         List<Discipline> discipline=new ArrayList<Discipline>();

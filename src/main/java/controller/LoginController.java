@@ -26,6 +26,7 @@ public class LoginController extends HttpServlet {
         List<User> users =userService.getAllUsers();
         for(User u:users){
             if(u.equals(user)){
+
                 req.getSession().setAttribute("user", user);
                 redirectString="/main";
             }
