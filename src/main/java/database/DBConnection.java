@@ -79,8 +79,8 @@ public class DBConnection {
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
 
 
-            statement1 = con.prepareStatement("INSERT INTO `disciplines` (`disciplineName`) VALUES (?)");
-         alldisciplines = con.prepareStatement("SELECT * FROM `disciplines`");
+            statement1 = con.prepareStatement("INSERT INTO `discipline` (`disciplineName`) VALUES (?)");
+         alldisciplines = con.prepareStatement("SELECT * FROM `discipline`");
           statement2 = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
             allstudents = con.prepareStatement("SELECT * FROM `students`");
 
@@ -137,6 +137,14 @@ return student;
             e.printStackTrace();
         }
     }
+    public void createSubject(Discipline discipline) {
+        try {
+            getStatement1().setString(1, discipline.getName());
+            getStatement1().executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public List<Discipline> getDisciplines() {
@@ -145,7 +153,6 @@ return student;
             rs=alldisciplines.executeQuery();
             Discipline disciplin1=new Discipline();
             disciplin1.setName(rs.getString("disciplineName"));
-            getStatement1().executeUpdate();
             discipline.add(disciplin1);
         } catch (SQLException e) {
             e.printStackTrace();

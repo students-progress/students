@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<form id="subjectform">
 <div id="tableStud">
     <p>
         <a class="textStud">Список дисциплин</a>
@@ -8,9 +9,9 @@
     <ul>
         <li id="termSelect">
 
-            <form id="form1" method="get" action="/admin/discipline/disciplineCreating"><button type="submit" class="bton">Создать дисциплину</button></form>
-            <form id="form2" method="get"><button id="butt" type="submit" name="butMark" class="btn btn-6 btn-6d but1" onclick="chck1('/admin/discipline/disciplineModify')">Модифицировать выбранную дисциплину </button></form>
-            <button type="submit" class="btn" onclick="deleteDisc()">Удалить выбранные дисциплины</button>
+            <button id="but1" type="submit"method="post" onclick="createSubject()" value="2">Создать дисциплину</button>
+            <button id="but2" type="submit"  onclick="modifySubject()">Модифицировать выбранную дисциплину</button>
+            <button id="but3" type="submit"  onclick="deleteSubject()">Удалить выбранные дисциплины</button>
 
         </li>
     </ul>
@@ -35,3 +36,41 @@
             </c:forEach>
             </tbody>
         </table>
+</div>
+</form>
+    <script>
+        function createSubject() {
+            var form = document.getElementById("subjectform");
+            form.action = "/subject-create";
+            form.method = "GET";
+            form.submit();
+        }
+        function deleteSubject() {
+            var form = document.getElementById("subjectform");
+            form.action = "/student-delete";
+            form.method = "GET";
+            form.submit();
+        }
+        function modifySubject() {
+            var students = document.getElementsByName("idStudent");
+            var k = 0;
+            for (i = 0; i < students.length; i++) {
+                if (students[i].checked) {
+                    k++;
+                }
+            }
+            if (k < 1) {
+                alert("Student ne vibran");
+                return;
+            }
+            if (k > 1) {
+                alert("Viberite tolko odnogo studenta");
+                return;
+            }
+
+            var form=document.getElementById("subjectform");
+            form.action="/student-modify";
+            form.method="GET";
+            form.submit();
+        }
+    </script>
