@@ -15,10 +15,10 @@
     <table id="v">
     <table id="panel" class="maxw" align="center">
         <tbody><tr id ="trMain">
-            <td id="col1" align="left"><a href="/students">Студенты</a></td>
-            <td  id="col2" align="center"><a href="/disciplines">Дисциплины</a></td>
-            <td  id="col3" align="center"><a href="/mark">Внести оценки</a></td>
-            <td  id="col4" align="right" ><a href="/terms?sel=1">Семестры</a></td>
+            <td id="col1" align="left"><a id="1a" href="/students">Студенты</a></td>
+            <td  id="col2" align="center"><a id="2a" href="/disciplines">Дисциплины</a></td>
+            <td  id="col3" align="center"><a id="3a" href="/mark">Внести оценки</a></td>
+            <td  id="col4" align="right" ><a  id="4a" href="/terms?sel=1">Семестры</a></td>
         </tr>
 
 

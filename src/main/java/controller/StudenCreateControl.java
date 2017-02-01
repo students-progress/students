@@ -18,12 +18,9 @@ public class StudenCreateControl extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        req.setAttribute("currentPage","/pages/createstudent.jsp");
-        req.getRequestDispatcher("/template.jsp").forward(req,resp);
-
+        req.setAttribute("currentPage2","/pages/createstudent.jsp");
+        req.getRequestDispatcher("/template2.jsp").forward(req,resp);
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         StudentService ob=new StudentService();

@@ -1,5 +1,6 @@
 package database;
 
+import entity.Discipline;
 import entity.Student;
 import entity.User;
 
@@ -17,6 +18,7 @@ public class DBConnection {
     private PreparedStatement getStudentById;
     private PreparedStatement allstudents;
     private PreparedStatement allLogins;
+    private PreparedStatement alldisciplines;
 
     public Connection getCon() {
         return con;
@@ -48,9 +50,12 @@ public class DBConnection {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
-            statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
+            statement = con.prepareStatement("INSERT INTO `disciplines` (`disciplineName`) VALUES (?)");
+            alldisciplines = con.prepareStatement("SELECT * FROM `disciplines`");
+           statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
             allstudents = con.prepareStatement("SELECT * FROM `students`");
-            getStudentById = con.prepareStatement("SELECT * FROM `students` WHERE `id`=?");
+
+           getStudentById = con.prepareStatement("SELECT * FROM `students` WHERE `id`=?");
             allLogins = con.prepareStatement("SELECT * FROM `user`");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -105,6 +110,20 @@ return student;
     }
     public void deleteStudent(int id){
 
+    }
+
+    public List<Discipline> getDisciplines() {
+        List<Discipline> discipline=new ArrayList<Discipline>();
+        try {
+            rs=alldisciplines.executeQuery();
+            Discipline disciplin1=new Discipline();
+            disciplin1.setName(rs.getString("name"));
+            getStatement().executeUpdate();
+            discipline.add(disciplin1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return discipline;
     }
     public List<Student> getAllStudents(){
         List<Student> students=new ArrayList<Student>();

@@ -10,7 +10,7 @@
 <body>
 
 <div id="header">Система управления студентами и их успеваемостью</div>
-
+<div id="mainMenu2" align="right"><a href="/loginPage" >Выйти</a></div>
 <jsp:include page="${currentPage}" flush="true"/>
 </body>
 </html>

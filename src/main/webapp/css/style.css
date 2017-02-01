@@ -8,7 +8,55 @@ tr #login_table{
     vertical-align: inherit;
     border-color: inherit;
 
+}
+#studBut{
 
+    font: 16px Comic Sans MS;
+    background: #f0f0ff;
+    margin-left: 6%;
+    border: 4px groove grey;
+}
+#textStud8{
+    font: 16px Comic Sans MS;
+    background: #f0f0ff;
+    width: 166px;
+    color: black;
+    box-shadow: black;
+    border: 4px groove grey;
+
+}
+#textStud9{
+    font: 16px Comic Sans MS;
+    background: #f0f0ff;
+    width: 166px;
+    color: black;
+    box-shadow: black;
+    border: 4px groove grey;
+
+
+}
+#textStud10{
+    font: 16px Comic Sans MS;
+    background: #f0f0ff;
+    width: 166px;
+    color: black;
+    box-shadow: black;
+    border: 4px groove grey;
+
+
+}
+#textStud11{
+    font: 16px Comic Sans MS;
+    background: #f0f0ff;
+    width: 166px;
+    color: black;
+    box-shadow: black;
+    border: 4px groove grey;
+
+
+}
+#blockcreate1{
+    margin-left: 19%;
 }
 .buttonstud{
     height:40px;
@@ -23,10 +71,7 @@ tr #login_table{
     background-color:#0000;
 }
 .login_form_container table#login_table {
-
-
     line-height: 40px;
-
     min-width: 350px;
     max-width: 1920px;
     text-align: center;
@@ -38,6 +83,7 @@ tr #login_table{
     position: relative;
     box-shadow: black;
     border: 5px groove grey;
+    border-radius:10px 10px;
 
 }
 
@@ -83,11 +129,24 @@ tr #login_table{
     padding: 0px;
     border-spacing: 0px;
 }
-.textStud {
-    margin-left: 31%;
+
+.textStud1{
+    cursor: pointer;
     background: #f0f0ff;
-    width: 35%;
-    font: 20px Comic Sans MS;
+    margin-left:22%;
+    width: 55%;
+    font: 18px Comic Sans MS;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    border: 5px groove grey;
+}
+.textStud {
+    margin-left: 37%;
+    background: #f0f0ff;
+    width: 25%;
+    font: 18px Comic Sans MS;
     color: black;
     display: block;
     text-align: center;
@@ -111,36 +170,57 @@ tr #login_table{
 a:hover{
     color: white;
     background: 	#696969;
-    font: 16px Comic Sans MS;
+    font: 18px Comic Sans MS;
 }
-
 a{
-
-    cursor: pointer;
 
     color: black; /* Цвет текста */
     text-decoration: none;
     /* Поля вокруг текста */
+    font: 18px Comic Sans MS;
     display:block;
-
-
-
-
-
-    -moz-transition:background .2s ease-in-out;
-    -webkit-transition:background .2s ease-in-out;
-    -o-transition:background .2s ease-in-out;
-    transition:background .2s ease-in-out;
 }
+#mainMenu2{
+
+    margin-left: 78%;
+    background-color:#f0f0f0;
+    text-align: center;
+    width: 6%;
+    border: 5px groove grey;
+    text-decoration: none;
+    font: 18pt Comic Sans MS;
 
 
+}
+#mainMenu1{
+
+    margin-left: 76%;
+    background-color:#f0f0f0;
+    text-align: center;
+    width: 6%;
+    border: 5px groove grey;
+    text-decoration: none;
+    font: 18pt Comic Sans MS;
+
+
+}
+#mainMenu{
+margin-left: 74%;
+    background-color:#f0f0f0;
+    text-align: center;
+    width: 10%;
+    border: 5px groove grey;
+text-decoration: none;
+    font: 18pt Comic Sans MS;
+
+
+}
 #header {
 
     background-color:#f0f0f0;
     text-align: center;
     width: 70%;
     border: 5px groove grey;
-
     font: 18pt Comic Sans MS;
     top: 0%;
     left: 18%;
@@ -179,12 +259,6 @@ li {
     border: 5px groove grey;
 
 
-}
-#maxw {
-    margin: 0 auto;
-    min-width: 280px;
-    max-width: 1920px;
-    text-align: center;
 }
 #but3 {
     background: #f0f0f0 ;

@@ -14,7 +14,7 @@
         var form=document.getElementById("form");
         var message=document.getElementById("message");
         if(login==""|| password==""){
-            message.appendChild(document.createTextNode("zopolnite polya"));
+            alert("zopolnite polya");
         }
 
         else{
