@@ -13,6 +13,8 @@ import java.util.List;
  */
 public class DBConnection {
     private PreparedStatement statement;
+    private PreparedStatement statement1;
+    private PreparedStatement statement2;
     private Connection con = null;
     private ResultSet rs = null;
     private PreparedStatement getStudentById;
@@ -36,6 +38,22 @@ public class DBConnection {
         this.rs = rs;
     }
 
+    public PreparedStatement getStatement1() {
+        return statement1;
+    }
+
+    public void setStatement1(PreparedStatement statement1) {
+        this.statement1 = statement1;
+    }
+
+    public PreparedStatement getStatement2() {
+        return statement2;
+    }
+
+    public void setStatement2(PreparedStatement statement2) {
+        this.statement2 = statement2;
+    }
+
     public PreparedStatement getStatement() {
         return statement;
     }
@@ -50,9 +68,9 @@ public class DBConnection {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
-            statement = con.prepareStatement("INSERT INTO `disciplines` (`disciplineName`) VALUES (?)");
-            alldisciplines = con.prepareStatement("SELECT * FROM `disciplines`");
-           statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
+        statement1 = con.prepareStatement("INSERT INTO `disciplines` (`disciplineName`) VALUES (?)");
+         alldisciplines = con.prepareStatement("SELECT * FROM `disciplines`");
+          statement2 = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
             allstudents = con.prepareStatement("SELECT * FROM `students`");
 
            getStudentById = con.prepareStatement("SELECT * FROM `students` WHERE `id`=?");
@@ -117,8 +135,8 @@ return student;
         try {
             rs=alldisciplines.executeQuery();
             Discipline disciplin1=new Discipline();
-            disciplin1.setName(rs.getString("name"));
-            getStatement().executeUpdate();
+            disciplin1.setName(rs.getString("disciplineName"));
+            getStatement1().executeUpdate();
             discipline.add(disciplin1);
         } catch (SQLException e) {
             e.printStackTrace();
