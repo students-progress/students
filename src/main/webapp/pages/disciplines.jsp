@@ -31,7 +31,7 @@
             <c:forEach items="${discipline}" var="disc">
              <tr> <td id="row2" height="100px"><input type="checkbox" name="idStudent"
                                                     value="${disc.id}"/></td>
-                    <td>${disc.name}</td>
+                 <td>${disc.name}</td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -47,29 +47,29 @@
         }
         function deleteSubject() {
             var form = document.getElementById("subjectform");
-            form.action = "/student-delete";
+            form.action = "/subject-delete";
             form.method = "GET";
             form.submit();
         }
         function modifySubject() {
-            var students = document.getElementsByName("idStudent");
+            var subject = document.getElementsByName("idStudent");
             var k = 0;
-            for (i = 0; i < students.length; i++) {
-                if (students[i].checked) {
+            for (i = 0; i < subject.length; i++) {
+                if (subject[i].checked) {
                     k++;
                 }
             }
             if (k < 1) {
-                alert("Student ne vibran");
+                alert("subject ne vibran");
                 return;
             }
             if (k > 1) {
-                alert("Viberite tolko odnogo studenta");
+                alert("Viberite tolko odnogo subjecta");
                 return;
             }
 
             var form=document.getElementById("subjectform");
-            form.action="/student-modify";
+            form.action="/subject-modify";
             form.method="GET";
             form.submit();
         }
