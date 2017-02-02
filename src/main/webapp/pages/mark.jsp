@@ -44,11 +44,11 @@
             }
         }
         if (k < 1) {
-            alert("Student ne vibran");
+            alert("Студент не выбран");
             return;
         }
         if (k > 1) {
-            alert("Viberite tolko odnogo studenta");
+            alert("Выберите только одного студента");
             return;
         }
 

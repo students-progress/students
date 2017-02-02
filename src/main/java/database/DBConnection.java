@@ -77,7 +77,7 @@ public class DBConnection {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
-statement=con.prepareStatement("DELETE FROM `student_system`.`students` WHERE `id`=? ");
+//statement=con.prepareStatement("DELETE FROM `student_system`.`students` WHERE `id`=? ");
 
             statement1 = con.prepareStatement("INSERT INTO `discipline` (`disciplineName`) VALUES (?)");
          alldisciplines = con.prepareStatement("SELECT * FROM `discipline`");
