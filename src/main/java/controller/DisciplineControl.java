@@ -1,8 +1,8 @@
 package controller;
 
-import entity.Student;
+
 import service.DisciplineService;
-import service.StudentService;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,12 +14,11 @@ import java.io.IOException;
 /**
  * Created by Asus on 01.02.2017.
  */
-
 @WebServlet("/disciplines")
 public class DisciplineControl extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       DisciplineService discipline =new DisciplineService();
-        req.setAttribute("discipline", discipline.getDiscipline());
+        req.setAttribute("disciplines", discipline.getDiscipline());
         req.setAttribute("currentPage2","/pages/disciplines.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
     }
