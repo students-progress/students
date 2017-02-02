@@ -16,6 +16,13 @@ tr #login_table{
     margin-left: 6%;
     border: 4px groove grey;
 }
+#subBut{
+
+    font: 16px Comic Sans MS;
+    background: #f0f0ff;
+    margin-left: 4%;
+    border: 4px groove grey;
+}
 #textStud8{
     font: 16px Comic Sans MS;
     background: #f0f0ff;
@@ -56,7 +63,7 @@ tr #login_table{
 
 }
 #blockcreate1{
-    margin-left: 19%;
+    margin-left: 12%;
 }
 .buttonstud{
     height:40px;
@@ -129,7 +136,18 @@ tr #login_table{
     padding: 0px;
     border-spacing: 0px;
 }
-
+.textSub{
+    cursor: pointer;
+    background: #f0f0ff;
+    margin-left:15%;
+    width: 60%;
+    font: 18px Comic Sans MS;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    border: 5px groove grey;
+}
 .textStud1{
     cursor: pointer;
     background: #f0f0ff;
@@ -250,10 +268,46 @@ li {
     border: 5px groove grey;
 
 }
-#but2 {
+#but23 {
     background: #f0f0f0 ;
     width: 300px;
     height: 50px;
+    font: 14px Comic Sans MS;
+    margin-bottom: 10px;
+    border: 5px groove grey;
+
+
+}
+#but32 {
+    background: #f0f0f0 ;
+    width: 466px;
+    height: 40px;
+    font: 18px Comic Sans MS;
+    border: 5px groove grey;
+    margin-bottom: -1.5%;
+
+
+}
+#my1{
+
+    width: 50%;
+
+
+}
+#but11{
+    background: #f0f0f0 ;
+    width: 166px;
+    height: 20px;
+    font: 14px Comic Sans MS;
+
+    border: 5px groove grey;
+
+
+}
+#but2 {
+    background: #f0f0f0 ;
+    width: 300px;
+    height: 40px;
     font: 14px Comic Sans MS;
     margin-bottom: 10px;
     border: 5px groove grey;
@@ -265,7 +319,7 @@ li {
     width: 300px;
     height: 40px;
     font: 14px Comic Sans MS;
-    margin-right: 40px;
+
     margin-bottom: 10px;
     border: 5px groove grey;
 
@@ -279,6 +333,10 @@ li {
     border: 5px groove grey;
 
 }
+#termSelect{
+margin-left: -4.5%;
+
+}
 #but1:hover{
     cursor: pointer;
     color: white;
@@ -290,6 +348,11 @@ li {
     background: 	#696969;
 }
 #but3:hover{
+     cursor: pointer;
+     color: white;
+     background: 	#696969;
+ }
+#but23:hover{
     cursor: pointer;
     color: white;
     background: 	#696969;

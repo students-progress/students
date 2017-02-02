@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: Asus
@@ -44,7 +47,17 @@
                     <td height="100px" class="columStud">Наименование дисциплины</td>
                 </tr>
 
-                </tbody></table>
+                </tbody>
+                <tbody>
+
+                <c:forEach items="${disciplines}" var="disc">
+                    <tr> <td id="row2" height="100px"><input type="checkbox" name="idStudent"
+                                                             value="${disc.id}"/></td>
+                        <td>${disc.name}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
         </li>
     </ul>
 </div>

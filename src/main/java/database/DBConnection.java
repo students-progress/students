@@ -149,11 +149,15 @@ return student;
 
     public List<Discipline> getDisciplines() {
         List<Discipline> discipline=new ArrayList<Discipline>();
+
         try {
             rs=alldisciplines.executeQuery();
+            while (rs.next()){
             Discipline disciplin1=new Discipline();
+            disciplin1.setId(rs.getInt("id"));
             disciplin1.setName(rs.getString("disciplineName"));
             discipline.add(disciplin1);
+        }
         } catch (SQLException e) {
             e.printStackTrace();
         }

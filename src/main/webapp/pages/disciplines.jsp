@@ -2,20 +2,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <form id="subjectform">
 <div id="tableStud">
-    <p>
-        <a class="textStud">Список дисциплин</a>
-    </p>
+
 
     <ul>
         <li id="termSelect">
 
             <button id="but1" type="submit"method="post" onclick="createSubject()" value="2">Создать дисциплину</button>
-            <button id="but2" type="submit"  onclick="modifySubject()">Модифицировать выбранную дисциплину</button>
+            <button id="but23" type="submit"  onclick="modifySubject()">Модифицировать выбранную дисциплину</button>
             <button id="but3" type="submit"  onclick="deleteSubject()">Удалить выбранные дисциплины</button>
 
         </li>
-    </ul>
-        <table id="my" class="table1" border="1" bordercolor="#f0f0f0">
+    </ul> <p>
+    <button id="but32">Список дисциплин</button>
+</p>
+        <table id="my1" class="table1" border="1" bordercolor="#f0f0f0">
             <tbody>
             <tr>
                 <th id="row1" height="100px"></th>
@@ -28,7 +28,7 @@
             </tbody>
             <tbody>
 
-            <c:forEach items="${students}" var="disc">
+            <c:forEach items="${disciplines}" var="disc">
              <tr> <td id="row2" height="100px"><input type="checkbox" name="idStudent"
                                                     value="${disc.id}"/></td>
                  <td>${disc.name}</td>
