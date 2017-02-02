@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @WebServlet ("/mark")
 
-public class markConrol extends HttpServlet {
+public class MarkConrol extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         StudentService service =new StudentService();
         req.setAttribute("students", service.getAllStudents());

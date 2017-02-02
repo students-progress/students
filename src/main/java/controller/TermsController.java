@@ -13,7 +13,7 @@ import java.io.IOException;
  * Created by Asus on 02.02.2017.
  */
 @WebServlet("/terms")
-public class termsController extends HttpServlet{
+public class TermsController extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         StudentService service =new StudentService();
         req.setAttribute("currentPage2","/pages/terms.jsp");
