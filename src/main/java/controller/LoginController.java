@@ -22,6 +22,7 @@ public class LoginController extends HttpServlet {
         User user=new User();
         user.setLogin(req.getParameter("login"));
         user.setPassword(req.getParameter("password"));
+        user.setRole(req.getParameter("role"));
         UserService userService=new UserService();
         List<User> users =userService.getAllUsers();
         for(User u:users){

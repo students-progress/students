@@ -55,9 +55,20 @@
         form.submit();
     }
     function deleteStudent() {
+        var students = document.getElementsByName("idStudent");
+        var k = "";
+        for (i = 0; i < students.length; i++) {
+            if (students[i].checked) {
+                k+=students[i].value+",";
+
+            }
+        }
         var form = document.getElementById("studentform");
+        var input = "<input type='hidden' name='ids'/>"
+        input.value=k;
+        form.appendChild(input);
         form.action = "/student-delete";
-        form.method = "GET";
+        form.method = "POST";
         form.submit();
     }
     function modifyStudent() {

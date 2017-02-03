@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <section>
-<form id="form" action ="/student-create"  method="post">
+<form id="form">
     <div id="blockcreate">
         <a class="textStud1">Для создания студента заполните все поля и нажмите кнопку "создать"</a>
         <div id="blockcreate1">
@@ -18,9 +18,9 @@
                     <li><input maxlength="25" size="20" id="1" name="surname" value="${student.surname}" class="textSt"></li>
                 </ul>
             </div>
-            <div>
+            <div id="hello">
                 <ul class="textarea">
-                    <input type="hidden" name="id" value="${student.id}" >
+                    <input type="hidden" id="idStudent" name="id" value="${student.id}" >
                     <li id="textStud9">Имя</li>
                     <li><input maxlength="25" size="20" id="2" name="name" value="${student.name}" class="textSt"></li>
                 </ul>
@@ -35,10 +35,27 @@
                 <ul>
                     <li id="textStud11">Дата поступления</li>
                     <li><input type="text" maxlength="25" size="20" id="datepicker" name="date" value="" class="textSt hasDatepicker"></li>
-                    <button id="studBut" class="btn btn-6 btn-6d textarea" onclick="chckspace('/service/StudentService/addStudent')"><div>Создать</div></button>
+                    <button id="studBut" class="button2" onclick="createSubject()"><div>Создать</div></button>
                 </ul>
             </div>
         </div>
     </div>
 </form>
 </section>
+<script>
+function createSubject() {
+    var form = document.getElementById("form");
+    var i = document.getElementById("idStudent").value;
+    if (i == 0) {
+        form.action = "/student-create";
+        form.method = "POST";
+        form.submit();
+    } else
+    {
+        form.action = "/student-modify";
+        form.method = "POST";
+        form.submit();
+    }
+}
+
+</script>

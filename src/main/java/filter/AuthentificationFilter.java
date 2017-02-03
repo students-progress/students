@@ -1,5 +1,7 @@
 package filter;
 
+import entity.User;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -51,6 +53,8 @@ public class AuthentificationFilter implements Filter{
         if(req.getSession().getAttribute("user")==null){
             resp.sendRedirect("/loginPage");
         }else {
+            User user = (User)req.getSession().getAttribute("user");
+            req.setAttribute("currentRole", user.getRole());
             filterChain.doFilter(req, resp);
             return;
         }

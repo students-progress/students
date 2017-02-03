@@ -9,6 +9,10 @@ tr #login_table{
     border-color: inherit;
 
 }
+#hello{
+
+    display: inline-block;
+}
 #studBut{
 
     font: 16px Comic Sans MS;
@@ -39,8 +43,6 @@ tr #login_table{
     color: black;
     box-shadow: black;
     border: 4px groove grey;
-
-
 }
 #textStud10{
     font: 16px Comic Sans MS;

@@ -12,8 +12,9 @@ import java.util.List;
  * Created by Asus on 30.12.2016.
  */
 public class DBConnection {
-    private PreparedStatement delete;
+    private PreparedStatement deleteStudent;
     private PreparedStatement statement;
+    private PreparedStatement ModifyStudentStatement;
     private PreparedStatement statement1;
     private PreparedStatement statement2;
     private Connection con = null;
@@ -23,12 +24,20 @@ public class DBConnection {
     private PreparedStatement allLogins;
     private PreparedStatement alldisciplines;
 
+    public PreparedStatement getModifyStudentStatement() {
+        return ModifyStudentStatement;
+    }
+
+    public void setModifyStudentStatement(PreparedStatement modifyStudentStatement) {
+        ModifyStudentStatement = modifyStudentStatement;
+    }
+
     public PreparedStatement getDelete() {
-        return delete;
+        return deleteStudent;
     }
 
     public void setDelete(PreparedStatement delete) {
-        this.delete = delete;
+        this.deleteStudent = delete;
     }
 
     public Connection getCon() {
@@ -77,8 +86,8 @@ public class DBConnection {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
-//statement=con.prepareStatement("DELETE FROM `student_system`.`students` WHERE `id`=? ");
-
+deleteStudent=con.prepareStatement("DELETE FROM `student_system`.`students` WHERE `id`=? ");
+ModifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`surname`=?,`group`=? WHERE `id`=?");
             statement1 = con.prepareStatement("INSERT INTO `discipline` (`disciplineName`) VALUES (?)");
          alldisciplines = con.prepareStatement("SELECT * FROM `discipline`");
           statement2 = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
@@ -101,6 +110,7 @@ public Student getStudentById(int id){
         rs=getStudentById.executeQuery();
 
         if (rs.next()) {
+           student.setId(id);
             student.setSurname(rs.getString("surname"));
             student.setName(rs.getString("name"));
             student.setGroup(rs.getString("group"));
@@ -112,6 +122,31 @@ return student;
 
 }
 
+    public void deleteStudent(int id) {
+        try {
+
+
+            deleteStudent.setInt(1, id);
+
+            deleteStudent.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void modifyStudent(Student student) {
+        try {
+
+            getModifyStudentStatement().setString(1, student.getName());
+            getModifyStudentStatement().setString(2, student.getSurname());
+            getModifyStudentStatement().setString(3, student.getGroup());
+            getModifyStudentStatement().setInt(4, student.getId());
+
+            getModifyStudentStatement().executeUpdate();
+          } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public List<User> getAllAcounts(){
         List<User> users=new ArrayList<User>();
         try {

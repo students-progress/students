@@ -10,6 +10,11 @@ import java.util.List;
  */
 public class StudentService {
 
+    public void modifyStudent(Student student){
+        DBConnection conn = new DBConnection();
+        conn.modifyStudent(student);
+        conn.close();
+    }
     public void addStudent(Student student){
         DBConnection conn = new DBConnection();
         conn.createStudent(student);
@@ -28,7 +33,12 @@ public class StudentService {
         conn.close();
         return student;
     }
+
     public void deleteStudent(int id){
+        DBConnection conn = new DBConnection();
+        conn.deleteStudent(id);
+        conn.close();
+
 
 
     }

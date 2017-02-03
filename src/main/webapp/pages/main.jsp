@@ -1,8 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Asus
-  Date: 30.01.2017
-  Time: 19:55
+  Date: 30.01.2017      </c:if>
+  Time: 19:55    <c:if test="${currentRole eq 'admin'}">
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,11 +18,11 @@
         <tbody><tr id ="trMain">
             <td id="col1" align="left"><a id="1a" href="/students">Студенты</a></td>
             <td  id="col2" align="center"><a id="2a" href="/disciplines">Дисциплины</a></td>
-            <td  id="col3" align="center"><a id="3a" href="/mark">Внести оценки</a></td>
+
+             <td  id="col3" align="center"><a id="3a" href="/mark">Внести оценки</a></td>
+
             <td  id="col4" align="right" ><a  id="4a" href="/terms?sel=1">Семестры</a></td>
         </tr>
-
-
         </tbody>
     </table>
     </table>

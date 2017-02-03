@@ -11,6 +11,7 @@
     function web() {
         var login=document.getElementById("login").value;
         var password=document.getElementById("password").value;
+        var role=document.getElementsByName("role")[0];
         var form=document.getElementById("form");
         var message=document.getElementById("message");
         if(login==""|| password==""){
@@ -47,9 +48,9 @@
                 <td>Выбрать роль:</td>
                 <td><select name="role" id="opening_list">
 
-                    <option value="1">Admin</option>
+                    <option value="1">admin</option>
 
-                    <option value="2">Student</option>
+                    <option value="2">student</option>
 
                 </select></td>
             </tr>

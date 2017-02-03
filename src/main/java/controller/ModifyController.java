@@ -29,7 +29,7 @@ public class ModifyController extends HttpServlet{
         student.setSurname(req.getParameter("surname"));
         student.setName(req.getParameter("name"));
         student.setGroup(req.getParameter("group"));
-        ob.addStudent(student);
+        ob.modifyStudent(student);
         resp.sendRedirect("/students");
     }
 }
