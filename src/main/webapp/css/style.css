@@ -214,7 +214,6 @@ a{
     font: 18px Comic Sans MS;
     display:block;
 }
-
 #row2{
     font: 20px Times New Roman;
 
@@ -400,7 +399,7 @@ margin-left: -4.5%;
     height: 30px;
     font: 16px Comic Sans MS;
     margin-bottom: 10px;
-    border: 5px groove grey;
+    border: 3px groove grey;
 
 
 }
