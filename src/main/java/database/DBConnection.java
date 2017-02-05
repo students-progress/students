@@ -14,7 +14,8 @@ import java.util.List;
 public class DBConnection {
     private PreparedStatement deleteStudent;
     private PreparedStatement statement;
-    private PreparedStatement ModifyStudentStatement;
+    private PreparedStatement modifyStudentStatement;
+    private PreparedStatement modifySubjectStatement;
     private PreparedStatement statement1;
     private PreparedStatement statement2;
     private Connection con = null;
@@ -24,62 +25,6 @@ public class DBConnection {
     private PreparedStatement allLogins;
     private PreparedStatement alldisciplines;
 
-    public PreparedStatement getModifyStudentStatement() {
-        return ModifyStudentStatement;
-    }
-
-    public void setModifyStudentStatement(PreparedStatement modifyStudentStatement) {
-        ModifyStudentStatement = modifyStudentStatement;
-    }
-
-    public PreparedStatement getDelete() {
-        return deleteStudent;
-    }
-
-    public void setDelete(PreparedStatement delete) {
-        this.deleteStudent = delete;
-    }
-
-    public Connection getCon() {
-        return con;
-    }
-
-    public void setCon(Connection con) {
-        this.con = con;
-    }
-
-    public ResultSet getRs() {
-        return rs;
-    }
-
-    public void setRs(ResultSet rs) {
-        this.rs = rs;
-    }
-
-    public PreparedStatement getStatement1() {
-        return statement1;
-    }
-
-    public void setStatement1(PreparedStatement statement1) {
-        this.statement1 = statement1;
-    }
-
-    public PreparedStatement getStatement2() {
-        return statement2;
-    }
-
-    public void setStatement2(PreparedStatement statement2) {
-        this.statement2 = statement2;
-    }
-
-    public PreparedStatement getStatement() {
-        return statement;
-    }
-
-    public void setStatement(PreparedStatement statement) {
-        this.statement = statement;
-    }
-
     public DBConnection() {
         try {
 
@@ -87,7 +32,7 @@ public class DBConnection {
             con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
 deleteStudent=con.prepareStatement("DELETE FROM `student_system`.`students` WHERE `id`=? ");
-ModifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`surname`=?,`group`=? WHERE `id`=?");
+modifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`surname`=?,`group`=? WHERE `id`=?");
             statement1 = con.prepareStatement("INSERT INTO `discipline` (`disciplineName`) VALUES (?)");
          alldisciplines = con.prepareStatement("SELECT * FROM `discipline`");
           statement2 = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
@@ -103,6 +48,26 @@ ModifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`
 
 
     }
+    public Discipline getSubjectById(int id){
+        Discipline discipline=new Discipline();
+        try {
+            getStudentById.setString(1, String.valueOf(id));
+            rs=getStudentById.executeQuery();
+
+            if (rs.next()) {
+                discipline.setId(id);
+
+                discipline.setName(rs.getString("name"));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return discipline;
+
+    }
+
+
 public Student getStudentById(int id){
     Student student=new Student();
         try {
@@ -133,16 +98,27 @@ return student;
             e.printStackTrace();
         }
     }
+    public void modifySubject(Discipline discipline) {
+        try {
 
+            modifyStudentStatement.setString(1, discipline.getName());
+
+            modifyStudentStatement.setInt(4, discipline.getId());
+
+            modifyStudentStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public void modifyStudent(Student student) {
         try {
 
-            getModifyStudentStatement().setString(1, student.getName());
-            getModifyStudentStatement().setString(2, student.getSurname());
-            getModifyStudentStatement().setString(3, student.getGroup());
-            getModifyStudentStatement().setInt(4, student.getId());
+            modifyStudentStatement.setString(1, student.getName());
+            modifyStudentStatement.setString(2, student.getSurname());
+            modifyStudentStatement.setString(3, student.getGroup());
+            modifyStudentStatement.setInt(4, student.getId());
 
-            getModifyStudentStatement().executeUpdate();
+            modifyStudentStatement.executeUpdate();
           } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -164,24 +140,22 @@ return student;
     }
     public void createStudent(Student student) {
         try {
-            getStatement().setString(1, student.getName());
-            getStatement().setString(2, student.getSurname());
-            getStatement().setString(3, student.getGroup());
-            getStatement().executeUpdate();
+            statement.setString(1, student.getName());
+            statement.setString(2, student.getSurname());
+            statement.setString(3, student.getGroup());
+            statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
     public void createSubject(Discipline discipline) {
         try {
-            getStatement1().setString(1, discipline.getName());
-            getStatement1().executeUpdate();
+            statement1.setString(1, discipline.getName());
+            statement1.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
-
     public List<Discipline> getDisciplines() {
         List<Discipline> discipline=new ArrayList<Discipline>();
 
@@ -209,16 +183,21 @@ return student;
                 st1.setSurname(rs.getString("surname"));
                 st1.setGroup(rs.getString("group"));
                 students.add(st1);
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return students;
     }
-
     public void close(){
         try {
+
+            modifyStudentStatement.close();
+            modifySubjectStatement.close();
+            statement1.close();
+            statement2.close();
+            alldisciplines.close();
+            getStudentById.close();
             statement.close();
             con.close();
             allLogins.close();

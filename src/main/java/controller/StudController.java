@@ -16,7 +16,7 @@ public class StudController extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         StudentService service =new StudentService();
-        req.setAttribute("students", service.getAllStudents());
+        req.setAttribute("students", service.get());
         req.setAttribute("currentPage2","/pages/students.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
     }

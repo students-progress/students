@@ -17,12 +17,12 @@ import java.io.IOException;
 public class DeleteStudentController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        StudentService delete=new StudentService();
+        StudentService service=new StudentService();
         String ids=req.getParameter("ids");
         System.out.println(ids);
         for(String s:ids.split(",")) {
             System.out.println(s);
-            delete.deleteStudent(Integer.parseInt(s));
+            service.delete(Integer.parseInt(s));
         }
         resp.sendRedirect("/students");
 

@@ -13,8 +13,8 @@ import java.io.IOException;
 public class ModifyController extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        StudentService ser=new StudentService();
-        Student student = ser.getById(Integer.parseInt(req.getParameter("idStudent")));
+        StudentService service=new StudentService();
+        Student student = service.getById(Integer.parseInt(req.getParameter("idStudent")));
         req.setAttribute("student", student);
         req.setAttribute("currentPage2","/pages/createstudent.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
@@ -29,7 +29,7 @@ public class ModifyController extends HttpServlet{
         student.setSurname(req.getParameter("surname"));
         student.setName(req.getParameter("name"));
         student.setGroup(req.getParameter("group"));
-        ob.modifyStudent(student);
+        ob.modify(student);
         resp.sendRedirect("/students");
     }
 }

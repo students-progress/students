@@ -35,7 +35,7 @@
                 <ul>
                     <li id="textStud11">Дата поступления</li>
                     <li><input type="text" maxlength="25" size="20" id="datepicker" name="date" value="" class="textSt hasDatepicker"></li>
-                    <button id="studBut" class="button2" onclick="createSubject()"><div>Создать</div></button>
+                    <button id="studBut" class="button2" onclick="createStudent()"><div>Создать</div></button>
                 </ul>
             </div>
         </div>
@@ -43,7 +43,7 @@
 </form>
 </section>
 <script>
-function createSubject() {
+function createStudent() {
     var form = document.getElementById("form");
     var i = document.getElementById("idStudent").value;
     if (i == 0) {

@@ -29,7 +29,7 @@
             <tbody>
 
             <c:forEach items="${disciplines}" var="disc">
-             <tr> <td id="row2" height="100px"><input type="checkbox" name="idStudent"
+             <tr> <td id="row2" height="100px"><input type="checkbox" name="idSubject"
                                                     value="${disc.id}"/></td>
                  <td>${disc.name}</td>
                 </tr>
@@ -51,8 +51,10 @@
             form.method = "GET";
             form.submit();
         }
+
+
         function modifySubject() {
-            var subject = document.getElementsByName("idStudent");
+            var subject = document.getElementsByName("idSubject");
             var k = 0;
             for (i = 0; i < subject.length; i++) {
                 if (subject[i].checked) {
@@ -60,11 +62,11 @@
                 }
             }
             if (k < 1) {
-                alert("subject ne vibran");
+                alert("Дисциплина не выбрана");
                 return;
             }
             if (k > 1) {
-                alert("Viberite tolko odnogo subjecta");
+                alert("Выберите только одну дисциплину");
                 return;
             }
 

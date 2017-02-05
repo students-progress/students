@@ -13,8 +13,25 @@
             <ul>
                 <li id="but11">Название</li>
                 <li><input id="1" name="name" maxlength="25" size="20" value="" class="textSt"></li>
-                <button id="subBut" class="btn btn-6 btn-6d textarea" onclick="chckspace1('/service/DisciplineService/addSubject')"><div>Создать</div></button>
+                <button id="subBut" class="btn" onclick="createSubject()"><div>Создать</div></button>
             </ul>
         </div>
     </div>
 </form>
+<script>
+    function createSubject() {
+        var form = document.getElementById("form");
+        var i = document.getElementById("idSubject").value;
+        if (i == 0) {
+            form.action = "/subject-create";
+            form.method = "POST";
+            form.submit();
+        } else
+        {
+            form.action = "/subject-modify";
+            form.method = "POST";
+            form.submit();
+        }
+    }
+
+</script>

@@ -18,7 +18,7 @@ import java.io.IOException;
 public class MarkConrol extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         StudentService service =new StudentService();
-        req.setAttribute("students", service.getAllStudents());
+        req.setAttribute("students", service.get());
         req.setAttribute("currentPage2","/pages/mark.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
     }
