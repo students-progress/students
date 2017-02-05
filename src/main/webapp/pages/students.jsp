@@ -60,7 +60,6 @@
         for (i = 0; i < students.length; i++) {
             if (students[i].checked) {
                 k+=students[i].value+",";
-
             }
         }
         var form = document.getElementById("studentform");

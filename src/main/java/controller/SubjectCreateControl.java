@@ -25,10 +25,10 @@ public class SubjectCreateControl extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         DisciplineService dis=new DisciplineService();
-        Discipline sub=new Discipline();
-        sub.setName(req.getParameter("name"));
+        Discipline subject=new Discipline();
+        subject.setName(req.getParameter("name"));
 
-        dis.add(sub);
+        dis.add(subject);
         resp.sendRedirect("/disciplines");
     }
 

@@ -21,6 +21,7 @@ public class DBConnection {
     private Connection con = null;
     private ResultSet rs = null;
     private PreparedStatement getStudentById;
+    private PreparedStatement getSubjectById;
     private PreparedStatement allstudents;
     private PreparedStatement allLogins;
     private PreparedStatement alldisciplines;
@@ -37,7 +38,7 @@ modifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`
          alldisciplines = con.prepareStatement("SELECT * FROM `discipline`");
           statement2 = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
             allstudents = con.prepareStatement("SELECT * FROM `students`");
-
+            getSubjectById = con.prepareStatement("SELECT * FROM `students` WHERE `id`=?");
            getStudentById = con.prepareStatement("SELECT * FROM `students` WHERE `id`=?");
             allLogins = con.prepareStatement("SELECT * FROM `user`");
         } catch (ClassNotFoundException e) {
@@ -51,8 +52,8 @@ modifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`
     public Discipline getSubjectById(int id){
         Discipline discipline=new Discipline();
         try {
-            getStudentById.setString(1, String.valueOf(id));
-            rs=getStudentById.executeQuery();
+            getSubjectById.setString(1, String.valueOf(id));
+            rs=getSubjectById.executeQuery();
 
             if (rs.next()) {
                 discipline.setId(id);
@@ -192,8 +193,6 @@ return student;
     public void close(){
         try {
 
-            modifyStudentStatement.close();
-            modifySubjectStatement.close();
             statement1.close();
             statement2.close();
             alldisciplines.close();

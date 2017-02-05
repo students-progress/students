@@ -1,9 +1,9 @@
 package controller;
 
 import entity.Discipline;
-import entity.Student;
+
 import service.DisciplineService;
-import service.StudentService;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
