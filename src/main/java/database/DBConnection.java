@@ -38,7 +38,7 @@ modifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`
          alldisciplines = con.prepareStatement("SELECT * FROM `discipline`");
           statement2 = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
             allstudents = con.prepareStatement("SELECT * FROM `students`");
-            getSubjectById = con.prepareStatement("SELECT * FROM `students` WHERE `id`=?");
+            getSubjectById = con.prepareStatement("SELECT * FROM `discipline` WHERE `id`=?");
            getStudentById = con.prepareStatement("SELECT * FROM `students` WHERE `id`=?");
             allLogins = con.prepareStatement("SELECT * FROM `user`");
         } catch (ClassNotFoundException e) {
