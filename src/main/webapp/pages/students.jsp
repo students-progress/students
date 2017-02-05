@@ -1,34 +1,31 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <form id="studentform">
-
     <div id="tableStud">
-        <div style="width: 320px; display: inline-block">
+        <div style="display: inline-block ;width: 300px">
             <%--<input type="hidden" name="sel" value="1">--%>
             <button id="but1" type="submit" name="butMark" value="2">
-                Просмотреть успеваемость студента
+                Просмотреть успеваемость
             </button>
-            <button id="but2" type="submit" method="post" onclick="createStudent()">Создать студента</button>
-
-        </div>
-        <div style="width: 320px; display: inline-block">
+            <button id="but2" type="submit"  name="butMark"  onclick="createStudent()">Создать студента</button>
+                <div style="display: inline-block;">
             <button id="but3" type="submit" name="butMark" onclick="modifyStudent()">
                 Модифицировать студента
             </button>
             <button id="but4" type="submit" onclick="deleteStudent()">Удалить выбранных студентов</button>
-        </div>
+                </div></div>
         <div class="textStud"> Список студентов</div>
         <table id="my" class="table1" border="1" bordercolor="#f0f0f0">
             <tbody>
             <tr>
-                <th id="row1" height="100px"></th>
-                <td height="100px" class="columStud">
+                <th id="row1" height="10px"></th>
+                <td height="10px" class="columStud">
                     <div class="text">Имя</div>
                 </td>
-                <td height="100px" class="columStud">
+                <td height="10px" class="columStud">
                     <div class="text">Фамилия</div>
                 </td>
-                <td height="100px" class="columStud">
+                <td height="10px" class="columStud">
                     <div class="text">Группа</div>
                 </td>
             </tr>
@@ -36,11 +33,11 @@
             <tbody>
             <c:forEach items="${students}" var="stud">
                 <tr>
-                    <td id="row2" height="100px"><input type="checkbox" name="idStudent"
+                    <td height="20px" id="row"><input type="checkbox" name="idStudent"
                                                         value="${stud.id}"/></td>
-                    <td>${stud.name}</td>
-                    <td>${stud.surname}</td>
-                    <td>${stud.group}</td>
+                    <td height="50px" align="left"  id="row2">${stud.name}</td>
+                    <td height="50px" align="left" id="row3">${stud.surname}</td>
+                    <td height="50px" align="left" id="row4">${stud.group}</td>
                 </tr>
             </c:forEach>
             </tbody>

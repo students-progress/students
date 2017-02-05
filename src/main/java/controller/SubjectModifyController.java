@@ -17,7 +17,7 @@ public class SubjectModifyController  extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         DisciplineService service=new DisciplineService();
         Discipline discipline = service.getById(Integer.parseInt(req.getParameter("idSubject")));
-        req.setAttribute("disciplines", discipline);
+        req.setAttribute("discipline", discipline);
         req.setAttribute("currentPage2","/pages/subjectCreate.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
 

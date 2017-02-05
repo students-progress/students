@@ -1,5 +1,5 @@
 body{
-    background:url("../image/ol.jpg");
+    background:url("../image/oo.jpg");
     background-size: 100%;
 
 }
@@ -14,7 +14,6 @@ tr #login_table{
     display: inline-block;
 }
 #studBut{
-
     font: 16px Comic Sans MS;
     background: #f0f0ff;
     margin-left: 6%;
@@ -132,8 +131,23 @@ tr #login_table{
     border-bottom: 4px groove #f0f0ff;
 
 }
-.columStud {
+#row{
+
     font: 18px Comic Sans MS;
+}
+#row2{
+
+    font: 18px Comic Sans MS;
+}
+#row3{
+
+    font: 18px Comic Sans MS;
+}
+#row4{font: 18px Comic Sans MS;
+}
+
+.columStud {
+    font: 22px Times New Roman;
     background: #C4C4C4;
     padding: 0px;
     border-spacing: 0px;
@@ -163,14 +177,14 @@ tr #login_table{
     border: 5px groove grey;
 }
 .textStud {
-    margin-left: 37%;
+    margin-left: 40%;
     background: #f0f0ff;
-    width: 25%;
-    font: 18px Comic Sans MS;
+    width: 22%;
+    height: 25px;
+    font: 20px Comic Sans MS;
     color: black;
     display: block;
     text-align: center;
-    margin-top: 30px;
     border: 5px groove grey;
 
 }
@@ -200,15 +214,28 @@ a{
     font: 18px Comic Sans MS;
     display:block;
 }
+
+#row2{
+    font: 20px Times New Roman;
+
+}
+#row3{
+    font: 20px Times New Roman;
+
+}
+#row4{
+    font: 20px Times New Roman;
+
+}
 #mainMenu2{
 
-    margin-left: 78%;
+    margin-left: 76.5%;
     background-color:#f0f0f0;
-    text-align: center;
+
     width: 6%;
     border: 5px groove grey;
     text-decoration: none;
-    font: 18pt Comic Sans MS;
+    font: 17px Times New Roman;
 
 
 }
@@ -220,7 +247,7 @@ a{
     width: 6%;
     border: 5px groove grey;
     text-decoration: none;
-    font: 18pt Comic Sans MS;
+    font: 17px Times New Roman;
 
 
 }
@@ -230,8 +257,8 @@ margin-left: 74%;
     text-align: center;
     width: 10%;
     border: 5px groove grey;
-text-decoration: none;
-    font: 18pt Comic Sans MS;
+    text-decoration: none;
+    font: 17px Times New Roman;
 
 
 }
@@ -239,12 +266,12 @@ text-decoration: none;
 
     background-color:#f0f0f0;
     text-align: center;
-    width: 70%;
-    border: 5px groove grey;
-    font: 18pt Comic Sans MS;
-    top: 0%;
-    left: 18%;
-    margin:  auto;
+    width:70%;
+    border:5px groove grey;
+    font:18pt Comic Sans MS;
+    top:0%;
+   margin-left: 20%;
+    margin:auto;
     overflow:auto;
     margin-bottom: 30px;
 }
@@ -259,21 +286,11 @@ li {
     text-align: -webkit-match-parent;
     list-style-type: none;
 }
-#but1 {
 
-    background: #f0f0f0 ;
-    width: 300px;
-    height: 40px;
-    font: 14px Comic Sans MS;
-    margin-right: 40px;
-    margin-bottom: 10px;
-    border: 5px groove grey;
-
-}
 #but23 {
     background: #f0f0f0 ;
-    width: 300px;
-    height: 50px;
+    width: 255px;
+    height: 35px;
     font: 14px Comic Sans MS;
     margin-bottom: 10px;
     border: 5px groove grey;
@@ -281,18 +298,24 @@ li {
 
 }
 #but32 {
-    background: #f0f0f0 ;
-    width: 466px;
-    height: 40px;
-    font: 18px Comic Sans MS;
+
+    background: #C4C4C4;
+    width: 25%;
+    height: 35px;
+    font: 25px bold Times New Roman;
+    color: black;
+    display: block;
+    text-align: center;
     border: 5px groove grey;
-    margin-bottom: -1.5%;
+
+    margin-bottom: -2%;
+    margin-left: 13%;
 
 
 }
 #my1{
 
-    width: 50%;
+    width: 60.5%;
 
 
 }
@@ -306,32 +329,36 @@ li {
 
 
 }
+#but1 {
+    background: #f0f0f0 ;
+    width: 255px;
+    height: 35px;
+    font: 14px Comic Sans MS;
+
+    border: 5px groove grey;
+}
 #but2 {
     background: #f0f0f0 ;
-    width: 300px;
-    height: 40px;
+    width: 255px;
+    height: 35px;
     font: 14px Comic Sans MS;
-    margin-bottom: 10px;
     border: 5px groove grey;
-
-
 }
 #but3 {
     background: #f0f0f0 ;
-    width: 300px;
-    height: 40px;
+    width: 255px;
+    height: 35px;
     font: 14px Comic Sans MS;
 
-    margin-bottom: 10px;
     border: 5px groove grey;
 
 }
 #but4 {
     background: #f0f0f0 ;
-    width: 300px;
-    height: 40px;
+    width: 255px;
+    height: 35px;
     font: 14px Comic Sans MS;
-    margin-bottom: 10px;
+
     border: 5px groove grey;
 
 }
@@ -354,16 +381,18 @@ margin-left: -4.5%;
      color: white;
      background: 	#696969;
  }
-#but23:hover{
-    cursor: pointer;
-    color: white;
-    background: 	#696969;
-}
 #but4:hover{
     cursor: pointer;
     color: white;
     background: 	#696969;
 }
+
+#but23:hover{
+    cursor: pointer;
+    color: white;
+    background: 	#696969;
+}
+
 #col1{
     text-align:  center;
     background: #f0f0f0 ;
