@@ -18,7 +18,6 @@ public class ModifyController extends HttpServlet{
         req.setAttribute("student", student);
         req.setAttribute("currentPage2","/pages/createstudent.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
-
     }
 
     @Override

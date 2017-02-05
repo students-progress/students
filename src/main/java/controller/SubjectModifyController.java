@@ -1,10 +1,6 @@
 package controller;
-
 import entity.Discipline;
-
 import service.DisciplineService;
-
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +17,7 @@ public class SubjectModifyController  extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         DisciplineService service=new DisciplineService();
         Discipline discipline = service.getById(Integer.parseInt(req.getParameter("idSubject")));
-        req.setAttribute("discipline", discipline);
+        req.setAttribute("disciplines", discipline);
         req.setAttribute("currentPage2","/pages/subjectCreate.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
 
@@ -34,8 +30,7 @@ public class SubjectModifyController  extends HttpServlet{
         discipline.setId(Integer.parseInt(req.getParameter("id")));
 
         discipline.setName(req.getParameter("name"));
-
-       service.modify(discipline);
+        service.modify(discipline);
         resp.sendRedirect("/disciplines");
     }
 }

@@ -12,6 +12,7 @@ import java.util.List;
  * Created by Asus on 30.12.2016.
  */
 public class DBConnection {
+
     private PreparedStatement deleteStudent;
     private PreparedStatement statement;
     private PreparedStatement modifyStudentStatement;
@@ -28,7 +29,6 @@ public class DBConnection {
 
     public DBConnection() {
         try {
-
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/student_system?user=root&password=root&characterEncoding=UTF-8");
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
@@ -46,8 +46,6 @@ modifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
     public Discipline getSubjectById(int id){
         Discipline discipline=new Discipline();
@@ -57,9 +55,7 @@ modifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`
 
             if (rs.next()) {
                 discipline.setId(id);
-
                 discipline.setName(rs.getString("name"));
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -90,8 +86,6 @@ return student;
 
     public void deleteStudent(int id) {
         try {
-
-
             deleteStudent.setInt(1, id);
 
             deleteStudent.execute();

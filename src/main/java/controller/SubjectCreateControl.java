@@ -1,17 +1,12 @@
 package controller;
-
 import entity.Discipline;
-import entity.Student;
 import service.DisciplineService;
-import service.StudentService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
 /**
  * Created by Asus on 01.02.2017.
  */

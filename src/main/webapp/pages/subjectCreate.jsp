@@ -6,7 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<<form id="form" action ="/subject-create"  method="post">
+
+<section>
+    <form id="form">
     <div id="blockcreate">
         <div class="textSub">Для того что б создать новую дисциплину заполните все поля и нажмите кнопку "создать"</div>
         <div id="blockcreate1">
@@ -18,6 +20,7 @@
         </div>
     </div>
 </form>
+    </section>
 <script>
     function createSubject() {
         var form = document.getElementById("form");
