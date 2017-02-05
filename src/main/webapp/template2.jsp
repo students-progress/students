@@ -12,7 +12,7 @@
 <header class="maxw">
 <div  id="header" >
     Система управления студентами и их успеваемостью</div>
-    <div id="mainMenu2" align="center" href="/loginPage" >Выйти</div>
+    <div id="mainMenu2" align="center"><a href="/loginPage" >Выйти</a></div>
 
 
     <div id="mainMenu"><a href="/main" >Главное Меню</a></div>
