@@ -9,8 +9,8 @@
 
 <body>
 
-<div id="header">Система управления студентами и их успеваемостью</div>
-<div id="mainMenu2" align="right"><a href="/loginPage" >Выйти</a></div>
+<div id="header">СИСТЕМА УПРАВЛЕНИЯ СТУДЕНТАМИ И ИХ УСПЕВАЕМОСТЬЮ</div>
+<div><a id="mainMenu1" href="/loginPage" >Выйти</a></div>
 <jsp:include page="${currentPage}" flush="true"/>
 </body>
 </html>

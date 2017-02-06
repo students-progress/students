@@ -11,11 +11,11 @@
 
 <header class="maxw">
 <div  id="header" >
-    Система управления студентами и их успеваемостью</div>
-    <div id="mainMenu2" align="center"><a href="/loginPage" >Выйти</a></div>
+    СИСТЕМА УПРАВЛЕНИЯ СТУДЕНТАМИ И ИХ УСПЕВАЕМОСТЬЮ</div>
+    <div  align="center"><a id="mainMenu2" href="/loginPage"  >Выйти</a></div>
 
 
-    <div id="mainMenu"><a href="/main" >Главное Меню</a></div>
+    <div><a id="mainMenu" href="/main" >Главное Меню</a></div>
 
 <jsp:include page="${currentPage2}" flush="true"/>
 </body>

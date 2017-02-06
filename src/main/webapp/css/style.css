@@ -137,7 +137,7 @@ tr #login_table{
 }
 #row2{
 
-    font: 18px Comic Sans MS;
+    font: 16px Comic Sans MS;
 }
 #row3{
 
@@ -147,7 +147,7 @@ tr #login_table{
 }
 
 .columStud {
-    font: 22px Times New Roman;
+    font: 20px Times New Roman;
     background: #C4C4C4;
     padding: 0px;
     border-spacing: 0px;
@@ -181,12 +181,24 @@ tr #login_table{
     background: #f0f0ff;
     width: 22%;
     height: 25px;
-    font: 20px Comic Sans MS;
+    font: 18px Times New Roman;
     color: black;
     display: block;
     text-align: center;
     border: 5px groove grey;
 
+}
+.textStu{
+    margin-bottom: -2%;
+    margin-left: 16%;
+    background: #f0f0ff;
+    width: 22%;
+    height: 25px;
+    font: 18px Times New Roman;
+    color: black;
+    display: block;
+    text-align: center;
+    border: 5px groove grey;
 }
 #panel {
     margin-top: 50px;
@@ -206,6 +218,18 @@ a:hover{
     background: 	#696969;
     font: 18px Comic Sans MS;
 }
+#mainMenu:hover{ color:  white;
+    background: #696969;
+    }
+#mainMenu1:hover{ color:  white;
+    background: 	#696969;
+}
+#mainMenu2:hover{ color:  white;
+    background: 	#696969;
+}
+
+
+
 a{
 
     color: black; /* Цвет текста */
@@ -214,24 +238,25 @@ a{
     font: 18px Comic Sans MS;
     display:block;
 }
+
 #row2{
-    font: 20px Times New Roman;
+    font: 18px Times New Roman;
 
 }
 #row3{
-    font: 20px Times New Roman;
+    font: 18px Times New Roman;
 
 }
 #row4{
-    font: 20px Times New Roman;
+    font: 18px Times New Roman;
 
 }
 #mainMenu2{
 
-    margin-left: 76.5%;
+    margin-left: 60%;
     background-color:#f0f0f0;
 
-    width: 6%;
+    width: 5%;
     border: 5px groove grey;
     text-decoration: none;
     font: 17px Times New Roman;
@@ -239,11 +264,10 @@ a{
 
 }
 #mainMenu1{
-
-    margin-left: 76%;
+    margin-left: 79%;
     background-color:#f0f0f0;
     text-align: center;
-    width: 6%;
+    width: 5%;
     border: 5px groove grey;
     text-decoration: none;
     font: 17px Times New Roman;
@@ -251,10 +275,10 @@ a{
 
 }
 #mainMenu{
-margin-left: 74%;
+margin-left: 75%;
     background-color:#f0f0f0;
     text-align: center;
-    width: 10%;
+    width: 9%;
     border: 5px groove grey;
     text-decoration: none;
     font: 17px Times New Roman;
@@ -267,7 +291,7 @@ margin-left: 74%;
     text-align: center;
     width:70%;
     border:5px groove grey;
-    font:18pt Comic Sans MS;
+    font:18pt Times New Roman;
     top:0%;
    margin-left: 20%;
     margin:auto;

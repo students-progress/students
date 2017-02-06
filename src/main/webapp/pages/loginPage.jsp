@@ -48,9 +48,9 @@
                 <td>Выбрать роль:</td>
                 <td><select name="role" id="opening_list">
 
-                    <option value="1">admin</option>
+                    <option>admin</option>
 
-                    <option value="2">student</option>
+                    <option>student</option>
 
                 </select></td>
             </tr>

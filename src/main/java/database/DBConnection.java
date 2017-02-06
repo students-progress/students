@@ -34,6 +34,7 @@ public class DBConnection {
             statement = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?)");
 deleteStudent=con.prepareStatement("DELETE FROM `student_system`.`students` WHERE `id`=? ");
 modifyStudentStatement = con.prepareStatement("UPDATE  `students` SET `name`=?,`surname`=?,`group`=? WHERE `id`=?");
+            modifySubjectStatement = con.prepareStatement("UPDATE  `discipline` SET `disciplineName`=? WHERE `id`=?");
             statement1 = con.prepareStatement("INSERT INTO `discipline` (`disciplineName`) VALUES (?)");
          alldisciplines = con.prepareStatement("SELECT * FROM `discipline`");
           statement2 = con.prepareStatement("INSERT INTO `students` (`name`,`surname`,`group`) VALUES (?,?,?) WHERE `id`=?");
@@ -94,13 +95,13 @@ return student;
         }
     }
     public void modifySubject(Discipline discipline) {
-        try {
+        try { modifySubjectStatement.setString(1, discipline.getName());
+            modifySubjectStatement.setInt(2, discipline.getId());
 
-            modifyStudentStatement.setString(1, discipline.getName());
 
-            modifyStudentStatement.setInt(4, discipline.getId());
 
-            modifyStudentStatement.executeUpdate();
+
+            modifySubjectStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -187,13 +188,13 @@ return student;
     public void close(){
         try {
 
-            statement1.close();
-            statement2.close();
-            alldisciplines.close();
-            getStudentById.close();
-            statement.close();
-            con.close();
-            allLogins.close();
+             statement1.close();
+               statement2.close();
+                alldisciplines.close();
+                 getStudentById.close();
+                 statement.close();
+               con.close();
+             allLogins.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

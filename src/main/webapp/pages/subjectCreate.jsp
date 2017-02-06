@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Asus
@@ -10,11 +11,14 @@
 <section>
     <form id="form">
     <div id="blockcreate">
+<c:if test="${idSubject eq 0}">
         <div class="textSub">Для того что б создать новую дисциплину заполните все поля и нажмите кнопку "создать"</div>
-        <div id="blockcreate1">
+</c:if>
+    <div id="blockcreate1">
             <ul>
                 <li id="but11">Название</li>
-                <li><input id="1" name="name" maxlength="25" size="20" value="" class="textSt"></li>
+                <input type="hidden" id="idSubject" name="id" value="${discipline.id}">
+                <li><input id="1" name="name" maxlength="25" size="20" value="${discipline.name}" class="textSt"></li>
                 <button id="subBut" class="btn" onclick="createSubject()"><div>Создать</div></button>
             </ul>
         </div>

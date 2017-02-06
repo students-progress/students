@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <form id="changeForm">
     <div id="tableStud">
-            <button id="but4" type="submit" onclick="changeMark()">Изменить оценки выбранного студента</button>
+            <button id="but4" type="submit" onclick="changeMark()">Изменить оценки студента</button>
         <div class="textStud"> Список студентов</div>
         <table id="my" class="table1" border="1" bordercolor="#f0f0f0">
             <tbody>

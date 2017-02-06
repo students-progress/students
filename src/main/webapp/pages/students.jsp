@@ -7,26 +7,30 @@
             <button id="but1" type="submit" name="butMark" value="2">
                 Просмотреть успеваемость
             </button>
-            <button id="but2" type="submit"  name="butMark"  onclick="createStudent()">Создать студента</button>
-                <div style="display: inline-block;">
+<c:if test="${currentRole eq 'admin'}">
+
+                <button id="but2" type="submit"  name="butMark"  onclick="createStudent()">Создать студента</button>
+</c:if> <div style="display: inline-block;">
+<c:if test="${currentRole eq 'admin'}">
             <button id="but3" type="submit" name="butMark" onclick="modifyStudent()">
                 Модифицировать студента
-            </button>
+            </button></c:if>
+<c:if test="${currentRole eq 'admin'}">
             <button id="but4" type="submit" onclick="deleteStudent()">Удалить выбранных студентов</button>
-                </div></div>
-        <div class="textStud"> Список студентов</div>
+</c:if> </div></div>
+        <div class="textStud"> СПИСОК СТУДЕНТОВ</div>
         <table id="my" class="table1" border="1" bordercolor="#f0f0f0">
             <tbody>
             <tr>
                 <th id="row1" height="10px"></th>
                 <td height="10px" class="columStud">
-                    <div class="text">Имя</div>
+                    <div class="text">ИМЯ</div>
                 </td>
                 <td height="10px" class="columStud">
-                    <div class="text">Фамилия</div>
+                    <div class="text">ФАМИЛИЯ</div>
                 </td>
                 <td height="10px" class="columStud">
-                    <div class="text">Группа</div>
+                    <div class="text">ГРУППА</div>
                 </td>
             </tr>
             </tbody>
