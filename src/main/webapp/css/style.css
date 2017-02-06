@@ -216,7 +216,7 @@ tr #login_table{
 a:hover{
     color: white;
     background: 	#696969;
-    font: 18px Comic Sans MS;
+    font: 20px Times New Roman;
 }
 #mainMenu:hover{ color:  white;
     background: #696969;
@@ -235,7 +235,7 @@ a{
     color: black; /* Цвет текста */
     text-decoration: none;
     /* Поля вокруг текста */
-    font: 18px Comic Sans MS;
+    font: 20px Times New Roman;
     display:block;
 }
 
@@ -421,7 +421,7 @@ margin-left: -4.5%;
     background: #f0f0f0 ;
     width: 150px;
     height: 30px;
-    font: 16px Comic Sans MS;
+    font: 16px Times New Roman;
     margin-bottom: 10px;
     border: 3px groove grey;
 
@@ -432,7 +432,7 @@ margin-left: -4.5%;
     background: #f0f0f0 ;
     width: 150px;
     height: 30px;
-    font: 16px Comic Sans MS;
+    font: 16px Times New Roman;
     margin-bottom: 10px;
     border: 5px groove grey;
 
@@ -443,7 +443,7 @@ margin-left: -4.5%;
     background: #f0f0f0 ;
     width: 150px;
     height: 30px;
-    font: 16px Comic Sans MS;
+    font: 16px Times New Roman;
     margin-bottom: 10px;
     border: 5px groove grey;
 }
@@ -452,7 +452,7 @@ margin-left: -4.5%;
     background: #f0f0f0 ;
     width: 150px;
     height: 30px;
-    font: 16px Comic Sans MS;
+    font: 16px Times New Roman;
     margin-bottom: 10px;
     border: 5px groove grey;
 }
