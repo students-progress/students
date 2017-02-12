@@ -22,15 +22,15 @@ public class LoginController extends HttpServlet {
         User user=new User();
         user.setLogin(req.getParameter("login"));
         user.setPassword(req.getParameter("password"));
-        user.setRole(req.getParameter("role"));
+       user.setRole(req.getParameter("role"));
         UserService userService=new UserService();
         List<User> users =userService.getAllUsers();
         for(User u:users){
-            if(u.equals(user)){
-
+//            if(u.equals(user)){
+//user.setRole(u.getRole());
                 req.getSession().setAttribute("user", user);
                 redirectString="/main";
-            }
+
         }
         resp.sendRedirect(redirectString);
     }

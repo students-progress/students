@@ -15,26 +15,26 @@
             <div>
                 <ul class="textarea">
                     <li id="textStud8">Фамилия</li>
-                    <li><input maxlength="25" size="20" id="1" name="surname" value="${student.surname}" class="textSt"></li>
+                    <li><input maxlength="25" size="15" id="1" name="surname" value="${student.surname}" class="textSt"></li>
                 </ul>
             </div>
             <div id="hello">
                 <ul class="textarea">
                     <input type="hidden" id="idStudent" name="id" value="${student.id}" >
                     <li id="textStud9">Имя</li>
-                    <li><input maxlength="25" size="20" id="2" name="name" value="${student.name}" class="textSt"></li>
+                    <li><input maxlength="25" size="15" id="2" name="name" value="${student.name}" class="textSt"></li>
                 </ul>
             </div>
             <div>
                 <ul>
                     <li id="textStud10">Группа</li>
-                    <li><input maxlength="25" size="20" id="3" name="group" value="${student.group}" class="textSt"></li>
+                    <li><input maxlength="25" size="15" id="3" name="group" value="${student.group}" class="textSt"></li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li id="textStud11">Дата поступления</li>
-                    <li><input type="text" maxlength="25" size="20" id="datepicker" name="date" value="" class="textSt hasDatepicker"></li>
+                    <li id="textStud11">Поступления</li>
+                    <li><input type="text" maxlength="25" size="15" id="datepicker" name="date" value="" class="textSt hasDatepicker"></li>
                     <button id="studBut" class="button2" onclick="createStudent()"><div>Создать</div></button>
                 </ul>
             </div>

@@ -19,7 +19,6 @@ public class ModifyController extends HttpServlet{
         req.setAttribute("currentPage2","/pages/createstudent.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         StudentService ob=new StudentService();

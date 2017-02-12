@@ -7,22 +7,22 @@
         <table id="my" class="table1" border="1" bordercolor="#f0f0f0">
             <tbody>
             <tr>
-                <th id="row1" height="100px"></th>
-                <td height="100px" class="columStud">
-                    <div class="text">Имя</div>
+                <th id="row1" height="10px"></th>
+                <td height="10px" class="columStud">
+                    <div class="text">ИМЯ</div>
                 </td>
-                <td height="100px" class="columStud">
-                    <div class="text">Фамилия</div>
+                <td height="10px" class="columStud">
+                    <div class="text">ФАМИЛИЯ</div>
                 </td>
-                <td height="100px" class="columStud">
-                    <div class="text">Группа</div>
+                <td height="10px" class="columStud">
+                    <div class="text">ГРУППА</div>
                 </td>
             </tr>
             </tbody>
             <tbody>
             <c:forEach items="${students}" var="stud">
                 <tr>
-                    <td id="row2" height="100px"><input type="checkbox" name="idStudent"
+                    <td id="row2" align="left"  height="40px"><input type="checkbox" name="idStudent"
                                                         value="${stud.id}"/></td>
                     <td>${stud.name}</td>
                     <td>${stud.surname}</td>

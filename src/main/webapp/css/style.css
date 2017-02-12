@@ -29,7 +29,7 @@ tr #login_table{
 #textStud8{
     font: 16px Comic Sans MS;
     background: #f0f0ff;
-    width: 166px;
+    width: 100px;
     color: black;
     box-shadow: black;
     border: 4px groove grey;
@@ -38,7 +38,7 @@ tr #login_table{
 #textStud9{
     font: 16px Comic Sans MS;
     background: #f0f0ff;
-    width: 166px;
+    width: 100px;
     color: black;
     box-shadow: black;
     border: 4px groove grey;
@@ -46,7 +46,7 @@ tr #login_table{
 #textStud10{
     font: 16px Comic Sans MS;
     background: #f0f0ff;
-    width: 166px;
+    width: 100px;
     color: black;
     box-shadow: black;
     border: 4px groove grey;
@@ -54,9 +54,9 @@ tr #login_table{
 
 }
 #textStud11{
-    font: 16px Comic Sans MS;
+    font: 15px Comic Sans MS;
     background: #f0f0ff;
-    width: 166px;
+    width: 100px;
     color: black;
     box-shadow: black;
     border: 4px groove grey;
@@ -91,7 +91,6 @@ tr #login_table{
     position: relative;
     box-shadow: black;
     border: 5px groove grey;
-    border-radius:10px 10px;
 
 }
 
@@ -102,20 +101,32 @@ tr #login_table{
 
 }
 .table1{
-
-
     line-height: 40px;
-
     min-width: 350px;
     max-width: 1920px;
-    text-align: center;
+
     width: 100%;
-    font: 15px Comic Sans MS;
+    font:18px Times New Roman;
     background: #f0f0ff;
     color: black;
     border-spacing: 0px;
     position: relative;
-    box-shadow: #f0f0ff;;
+    box-shadow: #f0f0ff;
+    border: 5px groove grey;
+
+}
+.table2{
+    line-height: 40px;
+    min-width: 350px;
+    max-width: 1920px;
+margin-top: -1%;
+    width: 70%;
+    font:18px Times New Roman;
+    background: #f0f0ff;
+    color: black;
+    border-spacing: 0px;
+    position: relative;
+    box-shadow: #f0f0ff;
     border: 5px groove grey;
 
 }
@@ -137,20 +148,29 @@ tr #login_table{
 }
 #row2{
 
-    font: 16px Comic Sans MS;
+    font: 18px Times New Roman;
 }
 #row3{
 
-    font: 18px Comic Sans MS;
+    font: 18px Times New Roman;
 }
-#row4{font: 18px Comic Sans MS;
+#row4{font: 18px Times New Roman;
 }
-
-.columStud {
+.columStud1 {
+    text-align: center;
+    width:600px;
     font: 20px Times New Roman;
     background: #C4C4C4;
-    padding: 0px;
-    border-spacing: 0px;
+
+}
+.columStud {
+
+    width: 400px;
+    margin-top: 30px;
+text-align: center;
+    font: 20px Times New Roman;
+    background: #C4C4C4;
+
 }
 .textSub{
     cursor: pointer;
@@ -176,7 +196,20 @@ tr #login_table{
     margin-top: 30px;
     border: 5px groove grey;
 }
+.textStud1:hover{
+    cursor: pointer;
+    background: #f0f0ff;
+    margin-left:22%;
+    width: 55%;
+    font: 18px Comic Sans MS;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    border: 5px groove grey;
+}
 .textStud {
+    margin-top: 20px;
     margin-left: 40%;
     background: #f0f0ff;
     width: 22%;
@@ -189,8 +222,34 @@ tr #login_table{
 
 }
 .textStu{
-    margin-bottom: -2%;
+    margin-bottom: -10%;
     margin-left: 16%;
+    background: #f0f0ff;
+    width: 22%;
+
+    font: 18px Times New Roman;
+    color: black;
+    display: block;
+    text-align: center;
+    border: 5px groove grey;
+}
+#textStu{
+    margin-bottom: -20%;
+    margin-left: 16%;
+    background: #f0f0ff;
+    width: 22%;
+
+    font: 18px Times New Roman;
+    color: black;
+    display: block;
+    text-align: center;
+    border: 5px groove grey;
+}
+
+.textStu1{
+
+    margin-top: 10%;
+    margin-left: 5%;
     background: #f0f0ff;
     width: 22%;
     height: 25px;
@@ -210,8 +269,7 @@ tr #login_table{
 #row1 {
     color: black;
     background: #C4C4C4;
-    padding: 0px;
-    border-spacing: 0px;
+
 }
 a:hover{
     color: white;
@@ -239,10 +297,7 @@ a{
     display:block;
 }
 
-#row2{
-    font: 18px Times New Roman;
 
-}
 #row3{
     font: 18px Times New Roman;
 
@@ -253,32 +308,34 @@ a{
 }
 #mainMenu2{
 
-    margin-left: 60%;
+    margin-left: 76.7%;
     background-color:#f0f0f0;
-
-    width: 5%;
+margin-top: -57px;
+    width: 4%;
     border: 5px groove grey;
     text-decoration: none;
-    font: 17px Times New Roman;
+    font: 15px Times New Roman;
 
 
 }
 #mainMenu1{
-    margin-left: 79%;
+    margin-top: -57px;
+    margin-left: 86%;
     background-color:#f0f0f0;
     text-align: center;
-    width: 5%;
+    width: 4%;
     border: 5px groove grey;
     text-decoration: none;
-    font: 17px Times New Roman;
+    font: 15px Times New Roman;
 
 
 }
 #mainMenu{
-margin-left: 75%;
+margin-left: 76.5%;
+    margin-top: 15px;
     background-color:#f0f0f0;
     text-align: center;
-    width: 9%;
+    width: 8%;
     border: 5px groove grey;
     text-decoration: none;
     font: 17px Times New Roman;
@@ -303,19 +360,114 @@ form {
     margin-top: 0em;
 
 }
+#averageMark {
+    font: 15px Comic Sans MS;
+    width: 420px;
+    height: 30px;
+    margin-left: 4%;
+}
+#TermsStudBut {
+    font: 12px Arial;
+    left: 70%;
+    top: 30%;
+    width: 120px;
+    height: 30px;
+}
+.btn-6d {
+
+    background: #C4C4C4;
+
+    border: 5px groove grey;
+}
+#iii{
+
+    margin-top: -44%;
+
+}
+#comboStud {
+    font: 14px Times New Roman;
+    z-index: 3;
+margin-top: -25%;
+    width: 110px;
+    height: 25px;
+}
+#textTerm:hover{
+
+}
+
+#textTermsStud {
+    font: 15px Comic Sans MS;
+    right: 40%;
+    top: 30%;
+    width: 160px;
+    height: 30px;
+}
+.but1 {
+    width: 300px;
+    height: 30px;
+    font: 12px Arial;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
 
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+    display: inline-block;
     list-style-type: none;
 }
+
+
+#but14 {
+    background: #f0f0f0 ;
+    width: 270px;
+    height: 35px;
+    font: 14px Comic Sans MS;
+
+    border: 5px groove grey;
+
+
+}
+#but15 {
+     background: #f0f0f0 ;
+     width: 270px;
+     height: 35px;
+     font: 14px Comic Sans MS;
+
+     border: 5px groove grey;
+
+
+ }
+#but16{
+      background: #f0f0f0 ;
+      width: 270px;
+      height: 35px;
+      font: 14px Comic Sans MS;
+      border: 5px groove grey;
+
+
+  }
+#but14:hover{
+    cursor: pointer;
+    color: white;
+    background: 	#696969;
+}
+#but15:hover{
+     cursor: pointer;
+     color: white;
+     background: 	#696969;
+ }
+#but16:hover{
+      cursor: pointer;
+      color: white;
+      background: 	#696969;
+  }
 
 #but23 {
     background: #f0f0f0 ;
     width: 255px;
     height: 35px;
     font: 14px Comic Sans MS;
-    margin-bottom: 10px;
+
     border: 5px groove grey;
 
 
@@ -360,6 +512,23 @@ li {
 
     border: 5px groove grey;
 }
+#but61 {
+    margin-top: 6px;
+    background: #f0f0f0 ;
+    width: 150px;
+    height: 30px;
+    font: 14px Comic Sans MS;
+
+    border: 5px groove grey;
+}
+#but62 {
+    background: #f0f0f0 ;
+    width: 100px;
+    height: 30px;
+    font: 14px Comic Sans MS;
+margin-top: 20px;
+    border: 5px groove grey;
+}
 #but2 {
     background: #f0f0f0 ;
     width: 255px;
@@ -385,10 +554,7 @@ li {
     border: 5px groove grey;
 
 }
-#termSelect{
-margin-left: -4.5%;
 
-}
 #but1:hover{
     cursor: pointer;
     color: white;
@@ -421,7 +587,7 @@ margin-left: -4.5%;
     background: #f0f0f0 ;
     width: 150px;
     height: 30px;
-    font: 16px Times New Roman;
+    font: 15px Times New Roman;
     margin-bottom: 10px;
     border: 3px groove grey;
 
@@ -432,7 +598,7 @@ margin-left: -4.5%;
     background: #f0f0f0 ;
     width: 150px;
     height: 30px;
-    font: 16px Times New Roman;
+    font: 15px Times New Roman;
     margin-bottom: 10px;
     border: 5px groove grey;
 
@@ -443,7 +609,7 @@ margin-left: -4.5%;
     background: #f0f0f0 ;
     width: 150px;
     height: 30px;
-    font: 16px Times New Roman;
+    font: 15px Times New Roman;
     margin-bottom: 10px;
     border: 5px groove grey;
 }
@@ -452,7 +618,7 @@ margin-left: -4.5%;
     background: #f0f0f0 ;
     width: 150px;
     height: 30px;
-    font: 16px Times New Roman;
+    font: 15px Times New Roman;
     margin-bottom: 10px;
     border: 5px groove grey;
 }
@@ -462,9 +628,61 @@ margin-left: -4.5%;
     border: 1.5px solid #333;
     background: #C4C4C4;
 }
+#termSelect {
+
+    float: RIGHT;
+    font: 15px Comic Sans MS;
+    width: 350px;
+    margin-top: 70px;
+    margin-right: 100px;
+}
+#tableDisc1{
+
+    float: left;
+    width: 600px;
+    margin-top: -100px;
+    margin-right: 10px;
+}
+#termSelect1 {
+
+    margin-top: 120px;
+    font: 15px Comic Sans MS;
+    width: 350px;
+
+}
+#tableDisc2 {
+
+    margin-left: -5%;
+    margin-top: 120px;
+    float: left;
+
+margin-right: 20px;
+    line-height: 40px;
+    min-width: 350px;
+    max-width: 1920px;
+    text-align: center;
+    width:50%;
+    font: 20px Times New Roman;
+    background: #f0f0ff;
+    color: black;
+    border-spacing: 0px;
+    position: relative;
+    box-shadow: #f0f0ff;;
+
+
+}
+#tableStud6 {
+
+    width: 70%;
+    margin-left: -200px;
+    margin: 0 auto;
+    font: 20px Times New Roman;
+}
 #tableStud {
+
     width: 70%;
     margin: 0 auto;
+    font: 16px Times New Roman;
 }
 .support {
     display: inline-block;

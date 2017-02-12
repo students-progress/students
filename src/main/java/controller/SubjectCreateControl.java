@@ -22,7 +22,6 @@ public class SubjectCreateControl extends HttpServlet {
         DisciplineService dis=new DisciplineService();
         Discipline subject=new Discipline();
         subject.setName(req.getParameter("name"));
-
         dis.add(subject);
         resp.sendRedirect("/disciplines");
     }

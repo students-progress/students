@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <form id="studentform">
     <div id="tableStud">
-        <div style="display: inline-block ;width: 300px">
+
             <%--<input type="hidden" name="sel" value="1">--%>
             <button id="but1" type="submit" name="butMark" value="2">
                 Просмотреть успеваемость
@@ -10,14 +10,14 @@
 <c:if test="${currentRole eq 'admin'}">
 
                 <button id="but2" type="submit"  name="butMark"  onclick="createStudent()">Создать студента</button>
-</c:if> <div style="display: inline-block;">
-<c:if test="${currentRole eq 'admin'}">
+</c:if>
+<c:if test="${currentRole eq 'admin'}"><br>
             <button id="but3" type="submit" name="butMark" onclick="modifyStudent()">
                 Модифицировать студента
             </button></c:if>
 <c:if test="${currentRole eq 'admin'}">
             <button id="but4" type="submit" onclick="deleteStudent()">Удалить выбранных студентов</button>
-</c:if> </div></div>
+</c:if>
         <div class="textStud"> СПИСОК СТУДЕНТОВ</div>
         <table id="my" class="table1" border="1" bordercolor="#f0f0f0">
             <tbody>
@@ -57,16 +57,18 @@
     }
     function deleteStudent() {
         var students = document.getElementsByName("idStudent");
-        var k = "";
+        var k = 0;
         for (i = 0; i < students.length; i++) {
             if (students[i].checked) {
-                k+=students[i].value+",";
+                k++;
             }
         }
+        if (k < 1) {
+            alert("Student ne vibran");
+            return;
+        }
+
         var form = document.getElementById("studentform");
-        var input = "<input type='hidden' name='ids'/>"
-        input.value=k;
-        form.appendChild(input);
         form.action = "/student-delete";
         form.method = "POST";
         form.submit();
@@ -80,11 +82,11 @@
             }
         }
         if (k < 1) {
-            alert("Student ne vibran");
+            alert("Студент не выбран");
             return;
         }
         if (k > 1) {
-            alert("Viberite tolko odnogo studenta");
+            alert("Выберите только одного студента");
             return;
         }
 

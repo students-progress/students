@@ -1,8 +1,6 @@
 package controller;
 
-import entity.Student;
-import service.StudentService;
-
+import service.DisciplineService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,20 +9,20 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Asus on 03.02.2017.
+ * Created by Asus on
+ * 12.02.2017.
  */
-@WebServlet("/student-delete")
-public class DeleteStudentController extends HttpServlet {
-    @Override
+@WebServlet("/subject-delete")
+public class DeleteSubject extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        StudentService service=new StudentService();
-        String idArray[]=req.getParameterValues("idStudent");
+        DisciplineService service=new DisciplineService();
+        String idArray[]=req.getParameterValues("idSubject");
 
         for(String idString : idArray) {
 
             service.delete(Integer.parseInt(idString));
         }
-        resp.sendRedirect("/students");
+        resp.sendRedirect("/disciplines");
 
     }
 }

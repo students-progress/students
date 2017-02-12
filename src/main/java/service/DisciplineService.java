@@ -23,6 +23,11 @@ public class DisciplineService {
             return discipline;
 
     }
+    public void delete(int id){
+        DBConnection conn = new DBConnection();
+        conn.deleteSubject(id);
+        conn.close();
+    }
     public Discipline getById(int id){
         DBConnection conn = new DBConnection();
         Discipline discipline= conn.getSubjectById(id);

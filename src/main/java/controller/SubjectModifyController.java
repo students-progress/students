@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
 /**
  * Created by Asus on 05.02.2017.
  */
@@ -17,6 +16,7 @@ public class SubjectModifyController  extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         DisciplineService service=new DisciplineService();
         Discipline discipline = service.getById(Integer.parseInt(req.getParameter("idSubject")));
+        System.out.println(discipline.getName());
         req.setAttribute("discipline", discipline);
         req.setAttribute("currentPage2","/pages/subjectCreate.jsp");
         req.getRequestDispatcher("/template2.jsp").forward(req,resp);
